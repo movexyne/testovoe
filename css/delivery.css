@@ -1,0 +1,139 @@
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Контейнер с Flexbox */
+.delivery-container {    
+    gap: 20px;
+  }
+  
+  /* Левый блок с текстом */
+  .delivery-text {
+    flex: 2;
+    font-family: 'Jost', sans-serif;
+  }
+  
+  /* Правый блок с кнопками */
+  .delivery-buttons {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+    width: 100%;
+  }
+  
+  /* Кнопки */
+  .delivery-btn {
+    background-color: #FBEBF1;
+    color: #FF89AA;
+    padding: 20px;
+    font-family:  'Jost';
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .delivery-btn.active {
+    background-color: #FF89AA;
+    color: #fff;
+  }
+  
+.delivery h1{
+    font-weight: 300;
+    font-family: 'Jost';
+    font-style: italic;
+    font-size: 30px;
+}
+
+/* Блоки доставки и оплаты */
+.delivery #delivery-payment {
+    flex: 1; /* Блок занимает оставшееся пространство */
+    margin-right: 20px; /* Отступ справа для разделения */
+}
+
+/* Заголовки */
+.delivery span h1 {
+    margin-bottom: 10px; /* Отступы для заголовков */
+}
+
+#delivery-payment span { 
+    display: block; /* Каждый span занимает отдельную строку */
+    font-weight: 500;
+    font-family: 'Jost';
+    font-size: 14px;
+}
+
+/* Стили для контента */
+.delivery .content1 {
+    display: none; /* Скрыть все блоки контента изначально */
+    padding: 10px;
+   
+}
+.content1 {
+    border-radius: 5px; /* Закруглить углы */
+    background-color: #ffffff; /* Светлый фон для блоков контента */
+    padding: 10px;
+}
+/* Показать конкретные блоки контента */
+#delivery-payment,
+#exchange-return,
+#requisites {
+    display: block; /* Изначально показать только первые блоки */
+}
+
+/* Стили для div с сеткой */
+.delivery div {
+    
+    gap: 20px; /* Пробел между колонками */
+    padding: 20px; /* Добавить отступы вокруг тела */
+}
+.delivery .pink-text{
+    color:#FF89AA;
+        font-weight: 500;
+        font-family: 'Jost';
+}
+
+@media (min-width: 1921px) {
+    .delivery .pink-text{
+        font-size: 16px;
+    }
+    .delivery  { 
+        flex-direction: row; /* Вертикальное расположение на меньших экранах */
+    }
+}
+@media (max-width: 1921px) {
+    .delivery-container {
+        display: grid    ;
+        grid-template-columns: 0.5fr 2fr 1fr;
+    }
+}
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .delivery-container{
+        gap: 5px;
+        flex-direction: column;
+    }
+
+    .delivery .pink-text{
+    font-size: 14px;
+    }
+    .delivery  {
+        flex-direction: column; /* Вертикальное расположение на меньших экранах */
+    }
+    .delivery-container{
+        grid-template-columns: 1fr; 
+    }
+}
+@media (max-width: 360px){
+    .content1 p{
+        font-size: 12px;
+    }
+}

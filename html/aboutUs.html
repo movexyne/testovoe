@@ -1,0 +1,514 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bojaworld</title>
+    <link rel="stylesheet" href="..\css\index.css">
+    <link rel="stylesheet" href="..\css\favorites.css">
+    <link rel="stylesheet" href="..\css\aboutUs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="html\contacts.html">
+<script src="..\js\script.js" defer></script>
+</head>
+<body>
+    <div class="top-line">бесплатная доставка по всей России при заказе от 10 000 рублей</div>
+    <div class="content">
+    <nav>
+        <div class="burger">
+            <span id="menu-toggle">
+                <div class="burger-container">
+                    <div class="burger-icon"></div>
+                    <div class="burger-icon"></div>
+                </div>
+                <span class="menu-text">каталог</span> <!-- Добавляем класс для текста -->
+            </span>
+            <div class="submenu">
+                <a href="#">все товары</a>
+                <a href="#">new & best</a>
+                <a href="#">8 марта</a> 
+                <div class="dropdown-toggle">
+                    <span>косметички</span> 
+                    <span class="menu-arrow">></span>
+                </div>
+                <div class="dropdown" style=" display: none;">
+                    <a href="#">косметички</a>
+                    <a href="#">все косметички</a>
+                    <a href="#">большие косметички</a>
+                    <a href="#">средние косметички</a>
+                    <a href="#">маленькие косметички</a>
+                    <a href="#">мини косметички</a>
+                    <a href="#">плоские косметички</a>
+                    <a href="#">косметички-пеналы</a>
+                    <a href="#">travel-кейсы</a>
+                    <span class="menu-bag"> 
+                        <img src="..\img\Rectangle 86.png"> 
+                        <p>Косметичка ванильный зефир<br>2300-4200 &#8381;</p> 
+                        <button>в корзину</button>
+                    </span>
+                </div>
+                
+                <div class="dropdown-toggle">
+                    <span>чехлы</span> 
+                    <span class="menu-arrow">></span>
+                </div>
+                <div class="dropdown" style=" display: none;">
+                    <a href="#">подарочные сертификаты</a>
+                    <a href="#">лимитированные наборы</a>
+                </div>
+                
+                <div class="dropdown-toggle">
+                    <span>сумки</span> 
+                    <span class="menu-arrow">></span>
+                </div>
+                <div class="dropdown" style=" display: none;">
+                    <a href="#">подарочные сертификаты</a>
+                    <a href="#">лимитированные наборы</a>
+                </div>
+                <a href="#">одежда</a>
+                
+                <div class="dropdown-toggle">
+                    <span>аксессуары</span> 
+                    <span class="menu-arrow">></span>
+                </div>
+                <div class="dropdown" style=" display: none;">
+                    <a href="#">подарочные сертификаты</a>
+                    <a href="#">лимитированные наборы</a>
+                </div>
+                <a href="#">для дома</a>
+                
+                <div class="dropdown-toggle">
+                    <span>другое</span> 
+                    <span class="menu-arrow">></span>
+                </div>
+                <div class="dropdown" style=" display: none;">
+                    <a href="#">подарочные сертификаты</a>
+                    <a href="#">лимитированные наборы</a>
+                </div>
+        <br>
+                <div class="dropdown-toggle">
+                    <span>подробности</span> 
+                    <span class="menu-arrow">></span>
+                </div>
+                <div class="dropdown" style=" display: none;">
+                    <a href="#">подарочные сертификаты</a>
+                    <a href="#">лимитированные наборы</a>
+                </div>
+                <a href="#">подарочные сертификаты</a>
+                <a href="#">лимитированные наборы</a>
+
+                <div class="dropdown-toggle">
+                    <span>о нас</span> 
+                    <span class="menu-arrow">></span>
+                </div>
+                <div class="dropdown" style=" display: none;">
+                    <a href="#">Подарочные сертификаты</a>
+                    <a href="#">Лимитированные наборы</a>
+                </div>
+
+                <a href="#">уход</a>
+                <a href="#">доставка</a>
+                <a href="#">контакты</a>
+        
+                <div class="account-info">
+                    <span><img src="..\img\User.png"><a href="html\personalaccount.html">мой аккаунт</a></span>
+                    <span>
+                        <span class="auth-button active"><a href="html\personalaccount.html">войти</a></span>
+                        <span class="auth-button"><a href="html\personalaccount.html">зарегистрироваться</a></span>
+                    </span>
+                    <span>+500 boja coins на первый заказ</span>
+                    <span class="burger-pink-block"><img src="..\img\Rectangle 129.png">выбирай подарки в корзине</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="side-panel" id="side-panel">
+            </div>
+
+            <img src="..\img\поиск.png" alt="Поиск" class="last_nav_img png_360">
+
+            <img src="..\img\лого.png" alt="Logo" class="nav_img">
+
+            
+            <img src="..\img\heart 360.png" alt="Избранное" class="png_360">
+            <img src="..\img\basket 360.png" id="basket" alt="Корзина" class="png_360">
+            <img src="..\img\профиль.png" alt="Профиль" class="last_nav_img not_360_png">
+            <img src="..\img\поиск.png" alt="Поиск" class="last_nav_img not_360_png" id="search">
+            <img src="..\img\избранное.png" alt="Избранное" class="last_nav_img not_360_png" id="favorites">
+        <button class="basket" id="basket">корзина(0)</button>
+    </nav>
+    <div class="favorites-slider" id="favorites-slider">
+        <h2>Избранное</h2>
+        <div class="product">
+            <div class="product-info">
+                <img src="..\img\Rectangle 86-2.png" alt="Косметика">
+                <h3>Косметичка махровая Yellow Sky (M)</h3>
+                <p>3600 ₽</p>
+                <span class="remove">Удалить</span>
+                <button class="add-to-cart">в корзину</button>
+            </div>
+            <div class="product-info">
+                <img src="..\img\Rectangle 86-2.png" alt="Косметика">
+                <h3>Косметичка махровая Yellow Sky (M)</h3>
+                <p>3600 ₽</p>
+                <span class="remove">Удалить</span>
+                <button class="add-to-cart">в корзину</button>
+            </div>
+            <div class="product-info">
+                <img src="..\img\Rectangle 86-2.png" alt="Косметика">
+                <h3>Косметичка махровая Yellow Sky (M)</h3>
+                <p>3600 ₽</p>
+                <span class="remove">Удалить</span>
+                <button class="add-to-cart">в корзину</button>
+            </div>
+            <span class="bottom-text">
+                <img src="..\img\User.png" alt="пользователь">
+                <p><u>авторизуйтесь</u>, чтобы сохранить товары в избранном</p>
+            </span>
+        </div>
+    </div>
+
+    <div class="basket-slider" id="basket-slider">
+        <div class="basket-content">
+            <h2>ваш заказ</h2>
+
+            <div class="progress-container">
+                <p class="progress-text">1000 ₽ до бесплатной доставки!</p>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="labels">
+                    <span>0 ₽</span>
+                    <span>10 000 ₽</span>
+                </div>
+            </div>
+
+            <div class="basket-product">
+                <div class="basket-product-info">
+                    <div class="image">
+                        <img src="..\img\Rectangle 86-2.png" alt="Косметичка" style="border-radius: 8px;">
+                    </div>
+                    <div>
+                        <div class="in_row">
+                            <h2>Косметичка махровая Yellow Sky (M)</h2>
+                            <p class="price">3600₽</p>
+                        </div>
+                        
+                        <div class="quantity-container">
+                            <span class="minus">-</span>
+                            <span class="quantity">1</span>
+                            <span class="plus">+</span>
+                        </div>
+                        <div class="in_row">
+                            <p class="name-on-keychain">имя на брелочке: Магия</p>
+                            <div class="gift-option">
+                                <label>
+                                    <input type="checkbox"> это подарок
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="basket-product">
+                <div class="basket-product-info">
+                    <div class="image">
+                        <img src="..\img\Rectangle 86-2.png" alt="Косметичка" style="border-radius: 8px;">
+                    </div>
+                    <div>
+                        <div class="in_row">
+                            <h2>Косметичка махровая Yellow Sky (M)</h2>
+                            <p class="price">3600₽</p>
+                        </div>
+                        
+                        <div class="quantity-container">
+                            <span class="minus">-</span>
+                            <span class="quantity">1</span>
+                            <span class="plus">+</span>
+                        </div>
+                        <div class="in_row">
+                            <p class="name-on-keychain">имя на брелочке: Магия</p>
+                            <div class="gift-option">
+                                <label>
+                                    <input type="checkbox"> это подарок
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="basket-product">
+                <div class="basket-product-info">
+                    <div class="image">
+                        <img src="..\img\Rectangle 86-2.png" alt="Косметичка" style="border-radius: 8px;">
+                    </div>
+                    <div>
+                        <div class="in_row">
+                            <h2>Косметичка махровая Yellow Sky (M)</h2>
+                            <p class="price">3600₽</p>
+                        </div>
+                        
+                        <div class="quantity-container">
+                            <span class="minus">-</span>
+                            <span class="quantity">1</span>
+                            <span class="plus">+</span>
+                        </div>
+                        <div class="in_row">
+                            <p class="name-on-keychain">имя на брелочке: Магия</p>
+                            <div class="gift-option">
+                                <label>
+                                    <input type="checkbox"> это подарок
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-button-container">
+                <div class="button"></div>
+                <span>добавить подарочную упаковку или открытку</span>
+            </div>
+            <div class="result-text">
+                <p>итого</p>
+                <h3>5000₽</h3>
+            </div>
+            
+            <button>оформить заказ</button>
+        </div>
+        
+        <div class="basket-bottom">подарки от boja и друзей бренда в каждом заказе!</div>
+    </div>
+<!--//////////////////////////////////////////-->
+    <img src="..\img\HELLO GORGEOUS!.png" alt="hello gorgeous" class="hero">
+
+  <div class="top-text">
+    мы — <span class="colored-letter"><i>boja</i></span>. И мы про тебя. Про нас.
+    <br> Про всех нас — таких разных, таких непохожих, но таких близких.
+  </div>
+    <div class="about-us-content">
+      <div class="first-box">
+        <div class="pink-box-image">
+            <img src="..\img\image-15.png" alt="Фото 1">
+            <img src="..\img\image-10.png" alt="Фото 2">
+            <img src="..\img\image-2.png" alt="Фото 3">
+            <img src="..\img\image-14.png" alt="Фото 4">
+            <img src="..\img\image-12.png" alt="Фото 5">
+            <img src="..\img\image-16.png" alt="Фото 6">
+          </div>
+          <div class="pink-box"> 
+            <img src="..\img\Vector (5).png">
+            <h1>boja — это больше, чем бренд</h1>
+            <p>Это компаньоны девушек, которые живут в своём ритме. Неуловимых путешественниц, которые всегда в пути. Сильных мам, балансирующих между заботой о себе и своих близких.</p>
+            <p>Влюблённых девочек, мечтающих о самом разном — о новом приключении, о покорении мира или просто о вкусном завтраке в любимом кафе.</p>
+          </div>
+        </div>
+    </div>
+  
+    <div class="about-us-content">
+      <h2 class="section-title">У <span class="colored-letter"><i>каждой</i></span> из нас своя история, свои мечты, свой ритм жизни.</h2>
+      <p class="section-text">и мы хотим, чтобы boja была частью этого пути — естественной, удобной, отражающей именно <span class="pink-text">тебя</span>. Поэтому мы создаём вещи в разных оттенках, формах и моделях, чтобы каждая нашла своё — то, что легко впишется в твою жизнь и будет её частью — <span class="pink_underscore"><u>яркой, стильной и наполненной маленькими радостями.</u></span></p>
+  
+      <div class="image-gallery">
+        <img src="..\img\long-1.png" alt="Фото 1">
+        <img src="..\img\long-2.png" alt="Фото 2">
+        <img src="..\img\long-3.png" alt="Фото 3">
+        <img src="..\img\long-4.png" alt="Фото 4">
+        <img src="..\img\long-5.png" alt="Фото 5">
+      </div>
+    </div>
+    <div class="about-us-content">
+<div class="middle-first-box">
+    <div class="dark-pink-box">
+        <h1>boja = цвет + женщины</h1>
+        <p>Название boja родом из хорватского языка, где оно означает «цвет» и «краски». Но для нас оно про большее.</p>
+        <p>В древности «бойа» называли женщин из кельтского племени Боев — сильных, смелых, не боящихся выбирать свой путь и защищать то, что им дорого. Мы верим, что каждая из нас такая. Уникальная. Настоящая. Раскрашивающая свою жизнь в те цвета, которые близки именно ей.</p>
+    </div>
+    <img src="..\img\Rectangle 93 (1).png" id="rect-93">
+</div>
+</div>
+<div class="about-us-content">
+<div class="middle-second-box">
+    <div class="dark-orange-box">
+        <img src="..\img\Vector (4).png">
+        <p>Мы создаём косметички и другие изделия, которые не просто про порядок в сумке — они про комфорт, про заботу о себе и про те самые детали, которые делают день ярче, удобнее и немного счастливее.</p>
+        <p>boja — это пространство, где каждая может быть собой. Сильной или нежной, смелой или мечтательной, решительной или лёгкой на подъём. Меняться, искать своё, пробовать новое. Быть boja — значит быть разной и всегда настоящей.</p>
+        <h1>не bojся быть собой – ты уже прекрасна!</h1>
+        <button class="yellow-btn">каким цветом раскрасим твой день сегодня?</button>
+    </div>
+    <div class="pink-box-image">
+        <img src="..\img\image-7.png" alt="Фото 1">
+        <img src="..\img\image-11.png" alt="Фото 2">
+        <img src="..\img\square-image-15.png" alt="Фото 3">
+        <img src="..\img\image-15.png" alt="Фото 4">
+        <img src="..\img\image-13.png" alt="Фото 5">
+        <img src="..\img\image-4.png" alt="Фото 5">
+      </div>
+</div>
+</div>
+<div class="about-us-content">
+<div class="middle-third-box">
+    <img src="..\img\image-1.png">
+    <div class="light-pink-box">
+        <img src="..\img\Vector (5).png">
+        <div>
+            <h1>Welcome to</h1>
+            <h2>the boja world!</h2>
+        </div>
+        <p>Здесь всё создано для тебя — с любовью, вниманием к деталям 
+            и желанием сделать каждый твой день ещё лучше. Найди свою 
+            идеальную boja и добавь в свою жизнь немного больше красок, 
+            комфорта и свободы!</p>
+            <button class="middle-third-box-button">в каталог</button>
+    </div>
+</div>
+</div>
+<div class="about-us-content">
+    <div class="registration-block">
+        <h2><i>регистрируйся в личном кабинете, коти boja сons, оплачивай ими покупки!</i></h2>
+        <div class="registration-box">
+            <img src="..\img\User white.png">
+            <div class="registration-box-span-button"><span><u>авторизуйтесь</u>, чтобы копить boja coins и оплачивать ими следующие покупки!</span>
+            <button>+500 boja coins на первый заказ</button></div>
+        </div> 
+        <div class="plans">
+            <div class="plan boja-girl">
+                <h3>boja girl <span class="cost">0–15 000₽</span></h3>
+                <div class="plan-image-gallery">
+                <img src="..\img\flower-2.png" alt="Flower 2" >
+                <img src="..\img\flower-1.png" alt="Flower 1">
+                <span>500 бонусов boja coins</span><br></div>
+                <div class="plan-image-gallery"><img src="..\img\flower-2.png" alt="Flower 2" >
+                <img src="..\img\flower-1.png" alt="Flower 1">
+                <span>500 рублей на первый заказ</span><br></div>
+                <div class="plan-image-gallery"><img src="..\img\flower-2.png" alt="Flower 2">
+                <img src="..\img\flower-1.png" alt="Flower 1">
+                <span>Ранний доступ к распродажам</span><br></div>
+            </div>
+            <div class="plan boja-babe">
+                <h3>boja babe <span class="cost">15 000–30 000₽</span></h3>
+                <div class="plan-image-gallery"><img src="..\img\flower-2.png" alt="Flower 2">
+                <img src="..\img\flower-1.png" alt="Flower 1">
+                <span>7% кэшбек boja coins</span><br></div>
+                <div class="plan-image-gallery"><img src="..\img\flower-2.png" alt="Flower 2">
+                <img src="..\img\flower-1.png" alt="Flower 1">
+                <span>700 баллов в день рождения</span><br></div>
+                <div class="plan-image-gallery"><img src="..\img\flower-2.png" alt="Flower 2">
+                <img src="..\img\flower-1.png" alt="Flower 1">
+                <span>Ранний доступ к лимитированным коллекциям</span><br></div>
+            </div>
+            <div class="plan boja-queen">
+                <div class="plan-image-gallery"><h3>boja queen <span class="cost">от 30 000₽</span></h3>
+                <img src="..\img\flower-2.png" alt="Flower 2" >
+                <img src="..\img\flower-1.png" alt="Flower 1">
+                <span>10% кэшбек boja coins</span><br></div>
+                <div class="plan-image-gallery"><img src="..\img\flower-2.png" alt="Flower 2" >
+                <img src="..\img\flower-1.png" alt="Flower 1">
+                <span>1000 баллов в день рождения</span><br></div>
+                <div class="plan-image-gallery"><img src="..\img\flower-2.png" alt="Flower 2" >
+                <img src="..\img\flower-1.png" alt="Flower 1">
+                <span>Ранний доступ к лимитированным коллекциям</span><br></div>
+                <div class="plan-image-gallery"><img src="..\img\flower-2.png" alt="Flower 2" >
+                <img src="..\img\flower-1.png" alt="Flower 1">
+                <span>Приглашения на закрытые мероприятия и подарки</span><br></div>
+                <div class="plan-image-gallery"><img src="..\img\flower-2.png" alt="Flower 2">
+                <img src="..\img\flower-1.png" alt="Flower 1">
+                <span>Ранний доступ к закрытым распродажам</span><br></div>
+                <div class="plan-image-gallery"><img src="..\img\flower-2.png" alt="Flower 2" >
+                <img src="..\img\flower-1.png" alt="Flower 1">
+                <span>Два брелочка к изделиям в подарок</span><br></div>
+            </div>
+        </div>
+    </div>
+ </div>
+ <div class="about-us-content">
+ <div class="bottom-box">
+    <div class="dark-orange-box">
+        <img src="..\img\Vector.png">
+        <h1>Заглядывай в наш Блог, следи за жизнью boja, узнавай о последних новостях и открытых вакансиях! </h1>   
+        <button class="yellow-btn"><a href="..\html\blog.html">перейти в блог</a></button>
+    </div>
+    <img src="..\img\Rectangle 126.png">
+</div></div>
+</div>
+<!--//////////////////////////////////////////-->
+    <img src="..\img\button_line.png" style=" display: block; width:100%; margin:20px 0 0 0; padding:0">
+    <footer>
+        <div class="footer-content">
+            <span class="logo-section">
+                <img src="..\img\лого.png" alt="Логотип">
+                <p>
+                    ИП Отрашкевич Ольга Сергеевна<br>
+                    ИНН 771820946320<br>
+                    2021-2024 О.С. Отрашкевич
+                </p>
+            </span>
+            <div class="catalog-section">
+                <h1>каталог</h1>
+                <div class="catalog-lists">
+                    <ol>
+                        <li><a href="html\catalog.html">все товары</a></li>
+                        <li><a href="#">новинки</a></li>
+                        <li><a href="#">sale</a></li>
+                        <li><a href="#">бестселлеры</a></li>
+                        <li><a href="#">косметички</a></li>
+                    </ol>
+                    <ol>
+                        <li><a href="#">сумки</a></li>
+                        <li><a href="#">чехлы</a></li>
+                        <li><a href="#">аксессуары</a></li>
+                        <li><a href="#">другое</a></li>
+                        <li><a href="#">для дома</a></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="in_row">
+            <div class="nav-section">
+                <h1>навигация</h1>
+                <ol>
+                    <li><a href="..\html\aboutUs.html">о нас</a></li>
+                <li><a href="..\html\care.html">уход</a></li>
+                <li><a href="..\html\delivery.html">оплата и доставка</a></li>
+                <li><a href="..\html\contacts.html">контакты</a></li>
+                <li><a href="..\html\blog.html">блог</a></li>
+                </ol>
+            </div>
+            <div class="contacts-section">
+                <h1>контакты и документы</h1>
+                <ol>
+                    <li><a href="https://t.me/bojabrand">телеграм</a></li>
+                    <li><a href="https://www.instagram.com/boja.brand">инстаграм*</a></li>
+                    <li><a href="https://vk.com/bojabrand">вконтакте</a></li>
+                </ol>
+                <ol>
+                    <li><a href="html\PrivacyPolicy.html">политика конфиденциальности</a></li>
+                    <li><a href="html\offerAgreement.html">договор и оферты</a></li>
+                </ol>
+                
+                <span class="mini_text">
+                    <p>дизайн сайта</p>
+                    <p style="color:#F7BFD4;">*принадлежит компании Meta, которая признана экстремистской, запрещен на территории РФ</p>
+                </span>
+            </div></div>
+        </div>
+    </footer>
+    <script>
+        window.addEventListener('resize', function() {
+            const img = document.getElementById('rect-93');
+            if (window.innerWidth <= 769) {
+                img.src = '../img/Rectangle 93.png';
+            } else {
+                img.src = '../img/Rectangle 93 (1).png';
+            }
+        });
+
+        // Вызываем событие при загрузке страницы
+        window.dispatchEvent(new Event('resize'));
+
+    </script>
+    </body>
+</html>
+   

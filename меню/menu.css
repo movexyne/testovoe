@@ -1,0 +1,358 @@
+@font-face {
+    font-family: 'IvyPresto Headline'; /* Название шрифта */
+    src: url('../fonts/IvyPrestoDisplay-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Jost';
+    src: url('../fonts/Jost-Medium.ttf') format('truetype');
+    font-weight: 500; /* Medium */
+}
+body {
+    font-family: 'Jost';
+    margin:0;
+    display: grid;
+    background-color: #FAFAFA;
+    overflow-x: hidden;
+    font-weight: 500;
+    color:#494747;
+    font-size:16px;
+    width: 100%;
+}
+
+body > :not(.top-line, footer){
+    margin: 1%;
+}
+
+.top-line{
+    background-color: #FF89AA;
+    padding:10px;
+    text-align: center;
+    color:#f0f0f0;
+    margin:0;
+    font-size:14px;
+    width:100%;
+}
+
+.nav_img {
+    padding: 0;
+    min-width: 5vw; /* Устанавливаем ширину */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    margin: 1vh auto;
+    display: block;
+}
+
+.last_nav_img {
+    margin-right: 0.7em;
+    width: 2vw; /* Фиксированная ширина */
+    height: 2vh; /* Фиксированная высота */ object-fit: contain; /* Сохраняем пропорции */
+}
+
+.basket {
+    height: 100%; 
+    padding: 10px 25px; 
+    background-color: #FF89AA;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+    font-family:Jost;
+    font-weight: 500;
+    font-size:16px;
+}
+
+/*начало меню*/
+.burger {
+    cursor: pointer;
+    margin: 1em;
+    font-size: 16px;
+    position: relative;
+    background-color: #FF89AA; /* Цвет фона для кнопки */
+    padding: 10px; /* Отступы для кнопки */
+    border-radius: 5px; /* Скругление углов */
+    color: white; /* Цвет текста */
+}
+
+.submenu {
+    display: none; 
+    position: absolute;
+    top: 0; /* Позиция сверху */
+    left: 100%; /* Сдвигаем меню вправо от основного */
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 280px; /* Ширина подменю */
+    border-radius: 5px; /* Скругление углов */
+}
+
+.burger:hover .submenu,
+.burger:focus-within .submenu {
+    display: block; 
+}
+
+.submenu a {
+    display: block;
+    padding: 10px 15px; /* Отступы для ссылок */
+    text-decoration: none;
+    color: #333; /* Цвет текста */
+}
+
+.submenu a:hover {
+    background-color: #f0f0f0; /* Цвет фона при наведении */
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none; /* Скрыть подменю по умолчанию */
+    padding-left: 20px; /* Отступ для подменю */
+}
+
+.dropdown-toggle:hover + .dropdown-menu,
+.dropdown-menu:hover {
+    display: block; /* Показать подменю при наведении */
+}
+
+.account-info {
+    margin-top: 20px;
+    padding: 10px; /* Отступы для аккаунта */
+    background-color: #FBEBF1; /* Цвет фона для аккаунта */
+    border-radius: 5px; /* Скругление углов */
+}
+
+.account-info span {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.account-info a {
+    color: #FF89AA; /* Цвет для ссылок в аккаунте */
+}
+
+.account-info span:not(.burger-pink-block) {
+    color: #FF89AA;
+}
+
+.burger-pink-block {
+    color: #ffffff;
+    background-color: #FF498A;
+    border-radius: 10px;
+}
+
+.burger button {
+    padding: 0 4px;
+    border: 2px solid #FF89AA; /* Установите однотонный цвет для границы */
+    border-radius: 10px;
+    color: #FF89AA;
+    background-color: #FBEBF1;
+    cursor: pointer; /* Изменение курсора при наведении */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход для фона и цвета текста */
+}
+.side-panel {
+    display: none; /* Скрываем панель по умолчанию */
+    position: absolute; /* Позиционирование относительно родителя */
+    top: 0; /* Позиция сверху */
+    left: -300px; /* Сдвигаем влево от основного меню */
+    width: 280px; /* Ширина боковой панели */
+    background-color: white; /* Цвет фона */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для боковой панели */
+    z-index: 1; /* Устанавливаем уровень над другими элементами */
+    border-radius: 5px; /* Скругление углов */
+    transition: left 0.3s; /* Плавный переход для появления */
+}
+/*конец меню*/
+nav{
+    margin: 15px 15px;
+    background-color: #FFF2F6;
+    border: 1px solid #FF89AA;
+    border-radius: 5px;
+    display: flex;
+    align-items: center; 
+    flex-wrap: nowrap;
+}
+
+footer{
+    background: #FBEBF1;
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 0%;
+}
+
+footer h1{
+    font-style: italic;
+    font-family: 'IvyPresto Headline';
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 10px; /* Отступ снизу */
+    margin-left: 40px;
+}
+
+footer ol {
+    list-style-type: none; /* Убираем маркеры */
+}
+
+
+footer ol li {
+    margin-bottom: 5px; /* Отступ между элементами списка */
+}
+
+.logo-section {
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+.catalog-section, .nav-section, .contacts-section {
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+footer img {
+    margin-top: 15%;
+    max-width: 100%; /* Адаптация изображения */
+}
+
+.logo-section, .catalog-section, .nav-section, .contacts-section {
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+.catalog-lists {
+    display: flex; /* Располагаем списки в ряд */
+    flex-direction: row; /* Горизонтальное расположение */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around; /* Равномерное распределение пространства */
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+}
+
+.contacts-section p{
+    padding-left: 40px;    
+}
+
+.in_row{
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+.contacts-section{
+    margin-left: 25%;
+}
+
+a {
+    text-decoration: none; /* Убирает подчеркивание */
+    color: #494747; /* Изменяет цвет текста */
+}
+
+@media (min-width: 1921px) {
+   
+    .mini_text{
+        font-size:40px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+    }
+    .nav-section,
+    .contacts-section{
+        margin-left: 35px;
+    }
+    .body {
+        font-size: 56px;
+    }
+    .top-line {
+        font-size: 54px;
+    }
+    .burger {
+        font-size: 56px;
+    }
+    .basket {
+        font-size: 56px;
+    }
+    footer h1 {
+        font-size: 100px;
+    }
+    footer ol li{
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1920px) {
+    .mini_text p{
+        font-size:12px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+    }
+    .nav-section,
+    .contacts-section{
+        margin-left: 35px;
+    }
+    .mini_text{
+        font-size:10px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .nav-section,
+    .contacts-section{
+        margin-left: 35px;
+    }
+    .mini_text{
+        font-size:10px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 1024px) {
+    .mini_text{
+        font-size:10px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+    }
+    .mini_text p{
+        font-size:10px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+    }
+    /*.footer-content {
+        display: flex;
+        flex-direction: column; 
+        align-items: flex-start; 
+        flex-wrap: wrap;
+        padding: 20px; 
+    }*/
+    .footer-content {
+        flex-direction: column; /* Вертикальное расположение */
+        align-items: flex-start; /* Выравнивание по левому краю */
+        flex-wrap: wrap;
+    }
+    .logo-section {
+        text-align: left; /* Выравнивание текста в логотипе */
+        margin-bottom: 20px; /* Отступ снизу для логотипа */
+    }
+    .nav-section,
+    .contacts-section {
+        display: inline-block; 
+        vertical-align: top; 
+        margin-left:-35px
+    }
+    footer h1 {
+        font-size: 30px; /* Меньший размер шрифта для заголовков */
+    }
+    .catalog-section{
+        margin-left:-35px
+    }
+}
+@media (max-width: 360px){
+
+}

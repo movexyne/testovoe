@@ -1,0 +1,82 @@
+
+
+.agreement p{
+font-family: 'Jost';
+font-weight: 500;
+}
+.agreement h1{
+    font-family: 'Jost';
+    font-weight: 300;
+    font-style: italic;
+}
+.agreement-text li{
+    margin-left: 5%;
+}
+
+@media (min-width: 1921px) {
+    .agreement {
+        border-radius: 10px;
+        background-color: #FBEBF1; /* Цвет фона блока */
+        padding: 10px; /* Отступы внутри блока для текста */
+    }
+    .agreement h1{
+        font-size: 40px;
+    }
+    .agreement {
+        display: flex;
+        justify-content: space-between; /* Распределяет пространство */
+    }
+
+}
+
+@media (min-width: 1440px) and (max-width: 1920px) {
+    .agreement {
+        display: flex;
+        justify-content: space-between; /* Распределяет пространство */
+    }
+    
+    .agreement h1{
+        font-size: 40px;
+        }
+        .agreement p{
+            font-size: 16px ;
+        }
+  
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .agreement h1{
+        font-size: 40px;
+        }
+        .agreement p{
+            font-size: 16px ;
+        }
+  
+}
+
+@media (max-width: 1024px) {
+    .agreement h1{
+        font-size: 35px;
+        }
+        .agreement p{
+            font-size: 14px ;
+        }
+    
+}
+@media (max-width: 360px){
+    .agreement h1{
+        font-size: 25px;
+        }
+        .agreement p{
+            font-size: 14px ;
+        }
+        .agreement {
+            background-color: #FAFAFA; 
+        }
+}
+@media (min-width: 360px) and (max-width: 1920px){
+    .agreement {
+        border-radius: 10px;
+        background-color: #FBEBF1; /* Цвет фона блока */
+        padding: 10px; /* Отступы внутри блока для текста */
+    }
+}

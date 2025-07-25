@@ -1,0 +1,648 @@
+
+h1{
+    font-style: italic;
+    font-family: 'Jost';
+    font-weight: 300;
+}
+h2{ 
+    font-family: 'Jost';
+    font-weight: 500;
+}
+h3{
+    font-family: 'Jost';
+    font-weight: 500;
+}
+.authorizaiton{
+    width:98%;
+    background-color:#FF89AA ;
+    color: #FFFFFF;
+    font-family: 'Jost';
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 10px ;
+    display: flex; /* Используем Flexbox для выравнивания */
+    align-items: center; /* Вертикальное выравнивание по центру */
+}
+.authorizaiton img {
+    margin-right: 10px; /* Отступ между изображением и текстом */
+    max-width: 40px; /* Установите нужный размер изображения */
+    height: auto; /* Сохраняем пропорции */
+}
+.authorizaiton-button{
+    background-color: #FFFFFF;
+    color: #FF89AA;
+    border-radius: 8px;
+    border: none;
+    padding: 5px 20px;
+}
+
+
+.contact-form div {
+    display: contents; /* Используем contents чтобы не создавать дополнительных контейнеров в сетке */
+}
+
+
+form{
+    border:1px solid #B9B8B8;
+    border-radius: 8px;
+    margin-top:10px;
+    padding:10px;
+}
+
+
+.delivery-options label {
+    position: relative;
+    padding-left: 25px; /* Отступ для псевдоэлемента */
+    cursor: pointer; /* Курсор при наведении */
+    align-items: center; /* Вертикальное выравнивание */
+    padding: 10px 10px 10px 35px; /* Отступы для кнопки */
+    border: 1px solid #B9B8B8; /* Граница для блока */
+    border-radius: 4px; /* Закругление углов */
+    transition: background-color 0.3s; /* Плавный переход */
+}
+
+.delivery-options label:hover {
+    background-color: #f0f0f0; /* Цвет фона при наведении */
+}
+
+.delivery-options input[type="radio"] {
+    display: none; /* Скрываем стандартный стиль */
+}
+
+.delivery-options label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 35%;
+    transform: translateY(-50%);
+    width: 15px; /* Увеличить диаметр */
+    height: 15px; /* Увеличить диаметр */
+    border: 1px solid #B9B8B8; /* Цвет границы */
+    border-radius: 50%; /* Круглая форма */
+    background-color: white; /* Цвет фона */
+    margin: 0 10px;
+}
+
+.delivery-options input[type="radio"]:checked + span::before {
+    background-color: #494747; /* Цвет фона при выборе */
+}
+.delivery-options input[type="radio"]:checked  {
+    background-color: #494747; /* Цвет фона при выборе */
+}
+.contact-form label input {
+    width: auto; /* Для чекбокса */
+    margin: 0 10px; /* Отступ справа для чекбокса */
+}
+.option{
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.option .order-price{
+    text-align: right;
+}
+.add-button {
+    background-color: #FFF2F6;
+    border: 1px solid #FF89AA;
+    border-radius: 4px; /* Rounded corners */
+    display: flex;
+    justify-content: center; /* Center the icon */
+    align-items: center; /* Center the icon vertically */
+    width: 15px; /* Adjust width as needed */
+    height: 15px; /* Adjust height as needed */
+    font-size: 15px; /* Font size */
+    margin-top: 10px;
+}
+
+.plus-sign {
+    color: #FF89AA; /* Color for the plus sign */
+    font-weight: bold; /* Make the plus sign bold */
+    padding: 5px; /* Отступы внутри кнопки */
+    border-radius: 50%; /* Круглая кнопка */
+    text-align: center; /* Центрируем текст */
+}
+
+
+/*add-to-order*/
+
+.add-to-order{
+    display: flex; /* Используем Flexbox для вертикального расположения */
+    flex-direction: column; /* Элементы в колонку */
+    background-color: #FF89AA;
+    color:#FFFFFF;
+    border:none;
+    border-radius: 8px;
+    gap: 10px;
+    padding: 10px;   
+    margin-top:10px; 
+}
+
+.add-product{
+    display: flex;
+    align-items: center; /* Центрируем элементы по вертикали */
+    flex-direction: row;
+    background-color: #FFFFFF;
+    color:#494747;
+    border:none;
+    border-radius: 8px;
+    padding: 10px;
+}
+.add-product img{
+    max-width: 80px; /* Изменяем на 100% для адаптивности */
+    height: auto;
+    object-fit: cover; 
+    border-radius: 10px;
+    display: block; /* Убедитесь, что изображение ведет себя как блочный элемент */
+    margin: 10px;
+}
+
+.order-content .product-info {
+    flex-grow: 1; /* Занимает оставшееся пространство */
+    
+}
+.prodect-second-column {
+    display: flex; /* Используем Flexbox для выравнивания элементов */
+    align-items: center; /* Центрируем по вертикали */
+    flex-direction: column; /* Вертикальное расположение элементов */
+}
+.prodect-first-column {
+    display: flex; /* Используем Flexbox для выравнивания элементов */
+    align-items: center; /* Центрируем по вертикали */
+    flex-direction: column; /* Вертикальное расположение элементов */
+    margin-bottom: auto; /* Прижимает к правой стороне */
+}
+.order-price {
+    margin-left: auto; /* Прижимает цену к правой стороне */
+}
+
+.add-button {
+    cursor: pointer; /* Курсор при наведении */
+}
+
+
+ .order-button{
+    background-color: #FF89AA;
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 20px;
+    margin-left: auto;
+    margin-top: 10px;
+ }
+ .order .promocode input{
+border: 1px solid #FF89AA;
+border-radius: 5px;
+ }
+ .order .promocode{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+ }
+ .order .promocode p{
+    grid: 1 / 4;
+ }
+/*promocode*/
+.promocode {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center; /* Центрирование по вертикали */
+    border-radius: 5px; /* скругленные края */
+    gap:30px;
+}
+.input-container {
+    display: flex;
+    flex-direction: column; /* Вертикальная ориентация */
+}
+.input-field {
+    border: 1px solid #ff6f91; /* розовая рамка для поля ввода */
+    border-radius: 5px; /* скругленные края */
+    padding: 10px;
+    width: 100%; /* занимает всю доступную ширину */
+}
+.apply-button {
+    align-self: end;
+    background-color: #ff6f91; /* розовый фон кнопки */
+    color: white; /* белый текст */
+    border: none; /* без рамки */
+    border-radius: 5px; /* скругленные края */
+    padding: 10px; /* отступы внутри кнопки */
+    cursor: pointer; /* указатель при наведении */
+    width: 100%; /* ширина кнопки равна ширине поля ввода */
+    height: 40px; /* высота кнопки изменена для соответствия полю ввода */
+}
+.apply-button:hover {
+    background-color: #ff4f81; /* более темный оттенок при наведении */
+}
+/*product*/
+.product {
+    display: grid;
+    margin-bottom: 20px;
+    /*padding: 10px;*/
+}
+
+.order-content .product-info {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 1fr; /* Изменено на 2 колонки */
+    align-items:flex-start;
+    background-color: #FFFFFF;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    column-gap: 20px;
+    padding: 10px;
+}
+
+
+.order-content .product-info p {
+    font-family: 'Jost';
+    font-weight: 500;
+}
+/*summ-block*/
+.summ-block{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center; /* Центрирование по вертикали */
+    border-radius: 5px; /* скругленные края */
+    column-gap:30px;
+    margin-top: 10px;
+}
+.second-submit-button{
+    background-color: #FF498A;
+    color:#FFFFFF;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+}
+@media (min-width: 1921px) {
+}
+.authorizaiton-button{
+    margin-left: auto; 
+}
+    .content {
+        font-family: 'Jost';
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto; /* Автоматическая высота строк */
+        gap: 20px; 
+    }
+    h1{
+        font-size: 50px ;
+    }
+    h2{
+        font-size: 25px ;
+    }
+    .authorizaiton, h3{
+        font-size:16px ;
+    }
+    .prodect-second-column {
+        margin-bottom: 25px;
+    }
+    .first-submit-button {
+        display: block; /* Показать первую кнопку */
+    }
+    .second-submit-button {
+        display: none; /* Скрыть вторую кнопку */
+    }
+
+@media (min-width: 1440px) and (max-width: 1920px) {
+    h1{
+        font-size: 50px ;
+    }
+    .authorizaiton, h3{
+        font-size:16px ;
+    }
+    h2{
+        font-size: 25px ;
+    }
+    .prodect-second-column {
+        margin-bottom: 25px;
+    }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+    h1{
+        font-size: 40px ;
+    }
+    .authorizaiton, h3{
+        font-size:14px ;
+    }
+    h2{
+        font-size: 18px ;
+    }
+    .prodect-second-column {
+        margin-bottom: 25px;
+    }
+}
+@media (max-width: 1024px) {
+    h1{
+        font-size: 30px ;
+    }
+    .authorizaiton, h3{
+        font-size:14px ;
+    }
+    h2{
+        font-size: 18px ;
+    }
+    .prodect-second-column {
+        margin-bottom: 25px;
+    }
+}
+@media (max-width: 768px) {
+    .order .promocode{
+        grid-template-columns:1fr;
+        gap: 10px;
+    }
+    .option{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .option .order-price {
+        grid-column: 1;
+        margin-left: 0;
+        margin-right: auto;
+    }
+    .product-info h2{
+        grid-column: 2 / 3 span;
+    }
+    .product-name{
+        grid-column: 1 / 3 span;
+    }
+    .order-content .product-info p:last-child{
+        grid-row: 3;
+        grid-column: 1 / 3 span;
+    }
+    .order-content .product-info .order-price{
+        grid-row: 2;
+        grid-column: 2 / 2 span;
+        margin-left: 0;
+    }
+    .product-info .image{
+        grid-row: 1 / 2 span;
+    }
+    .order-content .product-info{
+        grid-template-columns: 1fr 2.5fr max-content;
+    }
+    .prodect-second-column {
+        margin-left: 0;
+        margin-bottom: 0px;
+        flex-direction: row;
+        gap:10px;
+    }
+    .add-button{
+        margin-top: 0px;
+    }
+    h1{
+        font-size: 30px ;
+    }
+    .authorizaiton, h3{
+        font-size:14px ;
+        flex-direction: column;
+        align-items: baseline;
+        gap: 10px;
+    }
+    h2{
+        font-size: 14px ;
+    }
+    .content{
+        grid-template-columns: 1fr ;
+    }
+    .first-submit-button {
+        display: none; /* Скрыть первую кнопку */
+    }
+    .second-submit-button {
+        display: block; /* Показать вторую кнопку */
+    }
+    .contact-form{
+        grid-template-columns:1fr;
+    }
+
+    .product img {
+    grid-column: 1; /* Первая колонка */
+    grid-row: 1 / span 3; /* Занимает три ряда */
+    max-width: 100%; /* Изменяем на 100% для адаптивности */
+    height: auto;
+    object-fit: cover; 
+    border-radius: 10px;
+    display: block; /* Убедитесь, что изображение ведет себя как блочный элемент */
+    margin: 10px; /* Центрирование изображения */
+}
+
+
+
+.order-content .product-info img {
+    grid-column: 1; /* Первая колонка */
+    max-width: 100%; /* Адаптивная ширина */
+    height: auto;
+    object-fit: cover; 
+    justify-self: center; /* Центрирование по горизонтали */
+    align-self: center; /* Центрирование по вертикали */
+    margin-right: auto;
+    margin: 0;
+}
+
+
+.order-content .product-info h3 {
+    grid-column: 2; /* Вторая колонка */
+    grid-row: 1; /* Первый ряд */
+    font-family: 'Jost';
+    font-weight: 500;
+    color: #494747;
+}
+
+.quantity-container {
+    grid-column: 3;
+        grid-row: 2;
+    margin-bottom: 10px;
+}
+
+.add-product .order-price{
+    grid-column: 3 ; /* Первая колонка */
+    grid-row: 3;
+}
+
+.order{
+    grid-column: 2;
+    grid-row: 1; /* Первая строка */
+    align-self: start;
+    display: grid; /* Используем Grid для внутренней структуры заказа */
+    gap: 10px;
+    margin-top:10px;
+    padding: 10px;
+    background-color: #FFF2F6;
+    color:#494747;
+    border:none;
+    border-radius: 8px;
+    width:auto;
+}
+.additional-info{
+    color:#FF89AA;
+    font-family: 'Jost';
+    font-weight: 500;
+    font-size: 14px;
+}
+form button{
+    color:#FFFFFF;
+    background-color: #FF89AA;
+    padding: 10px;
+    width:80%;
+    border:none;
+    border-radius: 5px;
+}
+.delivery-options {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение */
+}
+.contact-form label {
+    margin-bottom: 5px; /* Отступ между меткой и полем ввода */
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%; /* Полная ширина полей */
+    padding: 8px; /* Отступы внутри полей */
+    border: 1px solid #B9B8B8; /* Граница полей */
+    border-radius: 4px; /* Закругление углов */
+}
+
+.contact-form {
+    display: grid;
+    gap: 10px; /* Промежутки между элементами */
+}
+.add-product{
+    flex-direction: column;
+    align-items: baseline;
+}
+.authorizaiton-button{
+    margin-left: 0; 
+}
+}
+
+@media (min-width: 769px) and (max-width: 1920px) {
+    .authorizaiton-button{
+        margin-left: auto; 
+    }
+    .prodect-second-column {
+        margin-left: auto;
+    }
+    .content {
+        font-family: 'Jost';
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto; /* Автоматическая высота строк */
+        gap: 20px; 
+    }
+    .first-submit-button {
+        display: block; /* Скрыть первую кнопку */
+    }
+    .second-submit-button {
+        display: none; /* Показать вторую кнопку */
+    }
+
+    
+.product img {
+    grid-column: 1; /* Первая колонка */
+    grid-row: 1 / span 3; /* Занимает три ряда */
+    max-width: 100%; /* Изменяем на 100% для адаптивности */
+    height: auto;
+    object-fit: cover; 
+    border-radius: 10px;
+    display: block; /* Убедитесь, что изображение ведет себя как блочный элемент */
+    margin: 10px; /* Центрирование изображения */
+}
+
+
+.order-content .product-info img {
+    grid-column: 1; /* Первая колонка */
+    max-width: 100%; /* Адаптивная ширина */
+    height: auto;
+    object-fit: cover; 
+    justify-self: center; /* Центрирование по горизонтали */
+    align-self: center; /* Центрирование по вертикали */
+    margin-right: auto;
+}
+
+
+.order-content .product-info h3 {
+    grid-column: 2; /* Вторая колонка */
+    grid-row: 1; /* Первый ряд */
+    font-family: 'Jost';
+    font-weight: 500;
+    color: #494747;
+}
+
+.quantity-container {
+    grid-column: 1; /* Первая колонка */
+    grid-row: 4; /* Четвертый ряд */
+    margin-bottom: 10px;
+}
+
+.add-product .order-price{
+    grid-column: 3; /* Первая колонка */
+    grid-row: 3 / 3;
+}
+
+.order{
+    grid-column: 2;
+    grid-row: 1; /* Первая строка */
+    align-self: start;
+    display: grid; /* Используем Grid для внутренней структуры заказа */
+    gap: 10px;
+    margin:10px;
+    padding: 10px;
+    background-color: #FFF2F6;
+    color:#494747;
+    border:none; 
+    border-radius: 8px;
+    width:auto;
+}
+.additional-info{
+    color:#FF89AA;
+    font-family: 'Jost';
+    font-weight: 500;
+    font-size: 14px;
+    grid-column: 2;
+    
+}
+form button{
+    color:#FFFFFF;
+    background-color: #FF89AA;
+    padding: 10px;
+    width:80%;
+    grid-column: 2;
+    border:none;
+    border-radius: 5px;
+}
+.delivery-options {
+    grid-column: 2; /* Размещаем во второй колонке */
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение */
+}
+.contact-form label {
+    grid-column: 2; /* Метки теперь во второй колонке */
+    margin-bottom: 5px; /* Отступ между меткой и полем ввода */
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    grid-column: 2; /* Элементы ввода во второй колонке */
+    width: 80%; /* Полная ширина полей */
+    padding: 8px; /* Отступы внутри полей */
+    border: 1px solid #B9B8B8; /* Граница полей */
+    border-radius: 4px; /* Закругление углов */
+}
+
+.contact-form {
+    grid-column: 1;
+    display: grid;
+    grid-row: 1; /* Первая строка */
+    grid-template-columns: 1fr 2fr; /* Первая колонка для меток, вторая для полей ввода */
+    gap: 10px; /* Промежутки между элементами */
+}
+}
+@media (max-width: 270px) {
+    .quantity-container {
+        grid-column: 1;
+        grid-row: 3;
+        margin-bottom: 10px;
+    }
+}

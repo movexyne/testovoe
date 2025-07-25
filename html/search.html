@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bojaworld</title>
+    <link rel="stylesheet" href="../css/search.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <div class="top-line">бесплатная доставка по всей России при заказе от 10 000 рублей</div>
+    <nav>
+        <div class="burger">
+            <span id="menu-toggle">Каталог</span>
+            <div class="submenu">
+                <a href="#">Все товары</a>
+                <a href="#">New & Best</a>
+                <a href="#">8 марта</a>
+                <a href="#">Косметички</a>
+                <a href="#">Чехлы</a>
+                <a href="#">Сумки</a>
+                <a href="#">Одежда</a>
+                <a href="#">Аксессуары</a>
+                <a href="#">Для дома</a>
+                <a href="#">Другие</a>
+        
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Подробности &#x25B6;</a>
+                    <div class="dropdown-menu">
+                        <a href="#">Подарочные сертификаты</a>
+                        <a href="#">Лимитированные наборы</a>
+                    </div>
+                </div>
+        
+                <div class="account-info">
+                    <span><img src="..\img\User.png">Мой аккаунт</span>
+                    <span>
+                        <button><a href="#">Войти</a></button>
+                        <button><a href="#">Зарегистрироваться</a></button>
+                    </span>
+                    <span>+500 boja coins на первый заказ</span>
+                    <span class="burger-pink-block"><img src="..\img\Rectangle 129.png">выбирай подарки в корзине</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="side-panel" id="side-panel">
+            <!-- Здесь будет контент, который открывается слева -->
+            <h2>Выберите пункт меню</h2>
+            <p>Выберите элемент из подменю, чтобы увидеть детали здесь.</p>
+        </div>
+        <img src="..\img\поиск.png" alt="Поиск" class="last_nav_img png_360">
+
+        <img src="..\img\лого.png" alt="Logo" class="nav_img">
+
+        
+        <img src="..\img\heart 360.png" alt="Избранное" class="png_360">
+        <img src="..\img\basket 360.png" id="basket" alt="Корзина" class="png_360">
+        <img src="..\img\профиль.png" alt="Профиль" class="last_nav_img not_360_png">
+        <img src="..\img\поиск.png" alt="Поиск" class="last_nav_img not_360_png" id="search">
+        <img src="..\img\избранное.png" alt="Избранное" class="last_nav_img not_360_png" id="favorites">
+    
+        <button class="basket">корзина(0)</button>
+    </nav>
+
+    <div class="top-slider" id="topSlider">
+        <div class="slider-content">
+            <h2>Поиск по сайту</h2>
+            <div class="search-container">
+                <div class="input-container">
+                    <img src="..\img\поиск.png" alt="Поиск" class="search-icon">
+                    <input type="text" placeholder="Введите ваш запрос..." class="search-input">
+                </div>
+                <button class="search-button">найти</button>
+            </div>
+            
+        </div>
+        <div class="main-slider-content">
+            <div class="side-bar">
+                <h2>Популярное</h2>
+                <a href="#">Новинки</a>
+                <a href="#">Косметички</a>
+                <a href="#">Чехлы</a>
+                <a href="#">Сумки</a>
+                <a href="#">Для дома</a>
+            </div>
+            <div class="top-slider-products">
+                <div class="top-slider-product">
+                    <img src="..\img\Rectangle 86-2.png" alt="Косметика">
+                    <p>Косметичка махровая Yellow Sky (M)</p>
+                    <p>2200 Р</p>
+                </div>
+                <div class="top-slider-product">
+                    <img src="..\img\Rectangle 86-2.png" alt="Косметика">
+                    <p>Косметичка махровая Yellow Sky (M)</p>
+                    <p>2200 Р</p>
+                </div>
+                <div class="top-slider-product">
+                    <img src="..\img\Rectangle 86-2.png" alt="Косметика">
+                    <p>Косметичка махровая Yellow Sky (M)</p>
+                    <p>2200 Р</p>
+                </div>
+                <div class="top-slider-product">
+                    <img src="..\img\Rectangle 86-2.png" alt="Косметика">
+                    <p>Косметичка махровая Yellow Sky (M)</p>
+                    <p>2200 Р</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img src="..\img/button_line.png" style=" display: block; width:99.2vw; margin:20px 0 0 0; padding:0">
+    <footer>
+        <div class="footer-content">
+            <span class="logo-section">
+                <img src="..\img\лого.png" alt="Логотип">
+                <p>
+                    ИП Отрашкевич Ольга Сергеевна<br>
+                    ИНН 771820946320<br>
+                    2021-2024 О.С. Отрашкевич
+                </p>
+            </span>
+            <div class="catalog-section">
+                <h1>каталог</h1>
+                <div class="catalog-lists">
+                    <ol>
+                        <li><a href="#">все товары</a></li>
+                        <li><a href="#">новинки</a></li>
+                        <li><a href="#">sale</a></li>
+                        <li><a href="#">бестселлеры</a></li>
+                    </ol>
+                    <ol>
+                        <li><a href="#">косметички</a>></li>
+                        <li><a href="#">сумки</a></li>
+                        <li><a href="#">чехлы</a></li>
+                        <li><a href="#">аксессуары</a></li>
+                        <li><a href="#">другое</a></li>
+                        <li><a href="#">для дома</a></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="in_row">
+            <div class="nav-section">
+                <h1>навигация</h1>
+                <ol>
+                    <li><a href="..\html\aboutUs.html">о нас</a></li>
+                <li><a href="..\html\care.html">уход</a></li>
+                <li><a href="..\html\delivery.html">оплата и доставка</a></li>
+                <li><a href="..\html\contacts.html">контакты</a></li>
+                <li><a href="..\html\blog.html">блог</a></li>
+                </ol>
+            </div>
+            <div class="contacts-section">
+                <h1>контакты и документы</h1>
+                <ol>
+                    <li><a href="#">телеграм</a></li>
+                    <li><a href="#">инстаграм*</a></li>
+                    <li><a href="#">вконтакте</a></li>
+                </ol>
+                <ol>
+                    <li><a href="#">политика конфиденциальности</a></li>
+                    <li><a href="#">договор и оферты</a></li>
+                </ol>
+                
+                <span class="mini_text">
+                    <p>дизайн сайта</p>
+                    <p style="color:#F7BFD4;">*принадлежит компании Meta, которая признана экстремистской, запрещен на территории РФ</p>
+                </span>
+            </div></div>
+        </div>
+    </footer>
+    <script>
+        const colors = ['#FF89AA', '#FF7D01', '#FF498A', '#FF89AA', '#FF7D01', '#FF498A', '#FF89AA'];
+    
+        // Получаем все элементы <span class="colored-letter"> на странице
+        const italicElements = document.querySelectorAll('span.colored-letter');
+    
+        italicElements.forEach(element => {
+            const word = element.textContent; // Получаем текст внутри <span>
+            element.innerHTML = ''; // Очищаем содержимое элемента
+    
+            // Создаем разноцветные буквы
+            for (let i = 0; i < word.length; i++) {
+                const span = document.createElement('span');
+                span.textContent = word[i]; // Каждая буква
+                span.style.color = colors[i % colors.length]; // Устанавливаем цвет
+                element.appendChild(span); // Добавляем букву в <span>
+            }
+        });
+          // Меню
+          document.querySelectorAll('.submenu-item').forEach(item => {
+            item.addEventListener("click", function(event) {
+                event.preventDefault();
+                
+                const sidePanel = document.getElementById("side-panel");
+                
+                // Изменяем содержимое боковой панели в зависимости от выбранного пункта
+                sidePanel.innerHTML = "<h2>" + this.textContent + "</h2><p>Информация о " + this.textContent + ".</p>";
+                
+                // Показываем боковую панель
+                sidePanel.style.display = "block"; // Показываем боковую панель
+                sidePanel.style.left = "0"; // Сдвигаем в видимую область
+            });
+        });
+
+        // Закрытие боковой панели при клике вне ее
+        document.addEventListener("click", function(event) {
+            const sidePanel = document.getElementById("side-panel");
+            if (!sidePanel.contains(event.target) && !document.querySelector('.burger').contains(event.target)) {
+                sidePanel.style.left = "-300px"; // Скрываем боковую панель
+            }
+        });
+        //открытие поиска
+        document.getElementById('search').addEventListener('click', function() {
+            const slider = document.getElementById('topSlider');
+            slider.classList.toggle('active'); 
+        });
+
+        /* Закрытие слайдера при клике вне его */
+        document.addEventListener("click", function(event) {
+            const slider = document.getElementById('topSlider');
+            if (!slider.contains(event.target) && !document.getElementById('search').contains(event.target)) {
+                slider.classList.remove('active');
+            }
+        });
+    </script>
+    </body>
+</html>

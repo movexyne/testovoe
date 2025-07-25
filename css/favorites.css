@@ -1,0 +1,1053 @@
+@font-face {
+    font-family: 'IvyPresto Headline'; /* Название шрифта */
+    src: url('../fonts/IvyPrestoDisplay-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Jost';
+    src: url('../fonts/Jost-Medium.ttf') format('truetype');
+    font-weight: 500; /* Medium */
+}
+
+
+
+.nav_img {
+    padding: 0;
+    min-width: 5vw; /* Устанавливаем ширину */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    margin: 1vh auto;
+}
+
+.last_nav_img {
+    margin-right: 0.7em;
+    object-fit: contain; /* Сохраняем пропорции */
+}
+
+#menu-toggle {
+    display: flex; /* Используем Flexbox для выравнивания */
+    align-items: center; /* Центрируем по вертикали */
+    justify-content: center;
+    flex-direction: row;
+}
+
+.burger-container {
+    display: flex; /* Располагаем иконки рядом */
+    flex-direction: column; /* Вертикальное расположение иконок */
+    margin-right: 8px; /* Отступ между иконками и текстом */
+    margin-left: 8px;
+}
+
+.burger-icon {
+    width: 25px; /* Ширина иконки */
+    background-color: #494747; /* Цвет иконки */
+    margin: 2px 0; /* Отступ между иконками */
+    border-radius: 2px;
+}
+
+.menu-text {
+    color: #494747; /* Цвет текста */
+    font-size: 16px; /* Размер шрифта */
+}
+/*начало меню*/
+.burger {
+    display: flex;
+    
+    align-items: center;
+    cursor: pointer;
+    margin: 0; /* Убираем отступы */
+    font-size: 16px;
+    border-radius: 5px; /* Скругление углов */
+    color: #494747; /* Цвет текста */
+}
+.submenu {
+    display: none; 
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 320px; 
+    border-radius: 5px; 
+    height: 100%; 
+    padding: 10px 0; 
+}
+
+.submenu.open {
+    transform: translateX(0);
+}
+.burger:hover .submenu,
+.burger:focus-within .submenu {
+    display: block; 
+}
+
+.submenu a {
+    display: block;
+    /* Отступы для ссылок */
+    text-decoration: none;
+    color: #333; /* Цвет текста */
+    padding: 8px 15px; /* Отступы по вертикали и горизонтали */
+    text-align: left;
+}
+
+.submenu a:hover {
+    background-color: #f0f0f0; /* Цвет фона при наведении */
+}
+
+
+
+/* Скрываем dropdown плавно */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%; /* Открывается справа */
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    width: 300px;
+    padding:8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Плавное появление */
+.burger:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #494747;
+    cursor: pointer;
+    padding: 8px 15px;
+    transition: color 0.3s ease;
+}
+
+.menu-arrow {
+    color: #E0E0E0;
+    transition: color 0.3s ease;
+}
+
+/* При активации изменяем цвет */
+.dropdown-toggle.active {
+    color: #FF89AA;
+}
+
+.dropdown-toggle.active .menu-arrow {
+    color: #FF89AA;
+}
+
+.account-info {
+    margin: 20px;
+    padding: 10px; /* Отступы для аккаунта */
+    background-color: #FBEBF1; /* Цвет фона для аккаунта */
+    border-radius: 5px; /* Скругление углов */
+}
+
+.account-info span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.account-info a {
+    color: #FF89AA; /* Цвет для ссылок в аккаунте */
+}
+
+.account-info span:not(.burger-pink-block,.auth-button) {
+    color: #FF89AA;
+}
+
+
+.burger-pink-block {
+    color: #ffffff;
+    background-color: #FF498A;
+    border-radius: 10px;
+
+}
+.burger-pink-block :not(img){
+    align-items: center;
+    justify-content: center;
+}
+
+.burger button {
+    padding: 10px 15px;
+    border: 2px solid #FF89AA; /* Установите однотонный цвет для границы */
+    border-radius: 10px;
+    cursor: pointer; /* Изменение курсора при наведении */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход для фона и цвета текста */
+}
+.side-panel {
+    position: fixed; /* Фиксируем панель */
+    top: 0;
+    left: 0; /* Прилепляем к левой стороне */
+    width: 280px; /* Ширина боковой панели */
+    height: 100vh; /* Занимает всю высоту экрана */
+    background-color: white; /* Цвет фона */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Тень */
+    z-index: 1000; /* Поднимаем над другими элементами */
+    border-radius: 0; /* Убираем скругление, чтобы было ровно */
+    transition: transform 0.3s ease-in-out; /* Плавное появление */
+    transform: translateX(-100%); /* Прячем за экраном */
+}
+
+/* Показываем меню */
+.side-panel.open {
+    transform: translateX(0);
+}
+
+
+
+footer{
+    background: #FBEBF1;
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 0%;
+}
+
+
+footer ol {
+    list-style-type: none; /* Убираем маркеры */
+}
+
+
+footer ol li {
+    margin-bottom: 5px; /* Отступ между элементами списка */
+}
+
+.logo-section {
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+.catalog-section, .nav-section, .contacts-section {
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+
+.logo-section, .catalog-section, .nav-section, .contacts-section {
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+
+
+
+
+a {
+    text-decoration: none; /* Убирает подчеркивание */
+    color: #494747; /* Изменяет цвет текста */
+}
+/* plus-icon */
+.button {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #FF89AA;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* checkbox */
+.custom-checkbox {
+    display: flex; /* Используем flexbox для выравнивания */
+    align-items: center; /* Центрируем по вертикали */
+    margin-top: 10px; /* Отступ сверху */
+}
+
+.checkbox-input {
+    display: none; /* Скрываем стандартный чекбокс */
+}
+
+.checkbox-label {
+    position: relative;
+    padding-left: 15px; /* Отступ для чекбокса */
+    cursor: pointer;
+    font-size: 10px;
+    margin-left: 10px; /* Отступ слева от чекбокса */
+    display: block; /* Заставляем метку занимать всю ширину */
+}
+
+.checkbox-label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 55%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border: 1px solid #FF89AA; /* Цвет рамки */
+    border-radius: 2px; /* Закругленные углы */
+}
+
+.checkbox-input:checked + .checkbox-label::after {
+    content: '✔'; /* Знак галочки */
+    position: absolute;
+    left: 3px;
+    top: 53%;
+    transform: translateY(-50%);
+    color: #FF89AA; /* Цвет галочки */
+    font-size: 8px; /* Размер галочки */
+}
+
+/*favorites - slider, basket - slider*/
+.last_nav_img {
+    cursor: pointer;
+}
+
+.favorites-slider{
+    padding: 20px;
+}
+.favorites-slider,
+.basket-slider {
+    position: fixed;
+    right: -100%; /* Скрываем слайдер за пределами экрана */
+    top: 0;
+    height: 100%;
+    width: 600px; /* Задаем ширину слайдера */
+    background-color: #FFF2F6;
+    border: none; 
+    transition: right 0.3s ease; 
+    z-index: 1000;
+}
+
+.favorites-slider.active,
+.basket-slider.active {
+    right: 0; /* Показать слайдер */
+}
+
+.product {
+    display: grid;
+    margin-bottom: 20px;
+}
+
+.product img {
+    grid-column: 1; /* Первая колонка */
+    grid-row: 1 / span 3; /* Занимает три ряда */
+    max-width: 100%; /* Изменяем на 100% для адаптивности */
+    height: auto;
+    object-fit: cover; 
+    border-radius: 10px;
+    display: block; /* Убедитесь, что изображение ведет себя как блочный элемент */
+    margin: 10px; /* Центрирование изображения */
+}
+
+.product-info {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 1fr; /* Изменено на 2 колонки */
+    align-items: center;
+    background-color: #FFFFFF;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    column-gap: 20px;
+    
+}
+
+.product-info img {
+    grid-column: 1; /* Первая колонка */
+    max-width: 100%; /* Адаптивная ширина */
+    height: auto;
+    object-fit: cover; 
+    justify-self: center; /* Центрирование по горизонтали */
+    align-self: center; /* Центрирование по вертикали */
+    margin-right: auto;
+}
+
+.product-info h3 {
+    grid-column: 2; /* Вторая колонка */
+    grid-row: 1; /* Первый ряд */
+    font-family: 'Jost';
+    font-weight: 500;
+    color: #494747;
+}
+
+.product-info p {
+    font-family: 'Jost';
+    font-weight: 500;
+}
+
+
+
+.gift-option {
+    display: flex;
+    justify-content: flex-start; /* Выравнивание по левому краю */
+    align-items: center; /* Выравнивание по вертикали */
+    grid-column: 1; /* Первая колонка */
+    grid-row: 5; /* Пятый ряд */
+    margin: 0;
+    color: #494747;
+}
+
+.gift-option label {
+    display: flex;
+    align-items: center; /* Чекбокс и текст выровнены по центру */
+    gap: 8px; /* Отступ между чекбоксом и текстом */
+    cursor: pointer;
+}
+
+.gift-option input[type="checkbox"] {
+    appearance: none; /* Убираем стандартный вид чекбокса */
+    width: 15px;
+    height: 15px;
+    border: 2px solid #FF89AA; /* Розовая рамка */
+    border-radius: 4px;
+    background-color: #FFFFFF; /* Белый фон */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Галочка внутри чекбокса */
+.gift-option input[type="checkbox"]:checked::before {
+    content: "✔"; /* Символ галочки */
+    font-size: 12px;
+    color: #FF89AA; /* Розовая галочка */
+    text-align: center;
+}
+
+
+
+.add-name-text {
+    margin-left: 5px; /* Отступ между иконкой и текстом */
+}
+
+.plus-icon-label {
+    grid-column: 2; /* Вторая колонка */
+    grid-row: 5; /* Пятый ряд */
+}
+
+.checkbox1 {
+    grid-column: 2; /* Вторая колонка */
+    grid-row: 6; /* Шестой ряд */
+}
+
+.checkbox-input {
+    margin-right: 5px; /* Отступ справа для чекбокса */
+}
+
+.checkbox-label {
+    grid-column: 2; /* Вторая колонка */
+    grid-row: 6; /* Шестой ряд */
+}
+
+/* Дополнительные стили для кнопок и текста */
+.product button {
+    background-color: #FF89AA;
+    color: #FFFFFF;
+    padding: 3px 5px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    border: none;
+}
+
+.remove {
+    color: #FF89AA;
+    text-decoration: underline;
+    font-family: 'Jost';
+    font-weight: 500;
+}
+
+.bottom-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.bottom-text img {
+    max-width: 16px;
+}
+
+.bottom-text p {
+    margin: 0; /* Убираем отступы у параграфа */
+    color: #FF89AA;
+    font-family: 'Jost';
+    font-weight: 500;
+}
+
+.favorites-slider h2, .basket-slider h2 {
+    font-family: 'Jost';
+    font-weight: 500;
+}
+.favorites-slider h2{
+    margin-bottom: 10px; 
+}
+
+.progress-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+}
+.progress-text {
+    font-size: 18px;
+    color: #494747;
+}
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #FFF2F6;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    margin: 10px 0;
+    border: 1px solid #FF89AA;
+}
+.progress-fill {
+    width: 90%;
+    height: 100%;
+    background-color: #FF89AA;
+    transition: width 0.5s ease;
+}
+.labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.basket-bottom{
+    position: absolute; /* Позволяет позиционировать элемент относительно родителя */
+    bottom: 0; /* Приклеиваем к низу */
+    left: 0; /* Приклеиваем к левому краю */
+    width: 100%; /* Ширина на весь родительский блок */
+    background-color: #FFFBF1; /* Цвет фона (по желанию) */
+    padding: 10px; /* Отступы (по желанию) */
+    text-align: center; /* Выравнивание текста по центру */
+    margin: 0;
+    color: #FFFFFF;
+    background-color: #FF7D01;
+    font-weight: 500;
+}
+.basket-content{
+    padding: 20px;
+}
+.menu-bag {
+    display: flex;
+    flex-direction: column; /* Измените на колонку, чтобы элементы располагались вертикально */
+    margin: 0 10px;
+    box-sizing: border-box;
+    overflow: visible; /* Убедитесь, что переполнение видно */
+    margin-top: 10px;
+}
+
+.menu-bag span {
+    flex: 1; /* Исправлено на 1, чтобы элементы занимали равное пространство */
+    margin: 0 1vw;
+    box-sizing: border-box;
+    position: relative;
+    padding: 10px; /* Добавьте отступ для красоты */
+    background: #f9f9f9; /* Фоновый цвет для визуализации */
+    border: 1px solid #ccc; /* Граница для визуализации */
+}
+/*плюсик с текстом*/
+
+.menu-button-container {
+    display: flex;
+    align-items: center;
+    font-family: 'Jost';
+    font-size: 16px;
+    color: #494747;
+}
+.menu-button-container .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #FF89AA; /* Розовая рамка */
+    border-radius: 6px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+.menu-button-container .button::before {
+    content: "+"; /* Плюс внутри */
+    font-size: 18px;
+    color: #FF89AA; /* Розовый цвет плюса */
+}
+.basket-content button{
+    position: absolute;
+    bottom: 5%; /* Приклеиваем к низу */
+    border:none;
+    border-radius: 5px;
+    background-color: #FF89AA;
+    color: #FFFFFF;
+    margin-top: 10px;
+    width: calc(100% - 40px);
+    padding: 10px;
+}
+.result-text {
+    position: absolute;
+    bottom: 10%;
+    display: flex;
+    justify-content: space-between; /* Размещает элементы по краям */
+    align-items: center; /* Центрирует по вертикали */
+    width: calc(100% - 40px); /* Уменьшаем ширину для учета отступа справа */
+    margin: 0;
+}
+
+.result-text p,.result-text h3 {
+    margin: 0; /* Убираем отступы у p */
+}
+
+.basket-product {
+    background-color: #FFFFFF; /* Цвет фона */
+    border-radius: 8px; /* Радиус углов */
+    padding: 15px; /* Отступы внутри */
+    display: flex; /* Для размещения элементов */
+    align-items: center; /* Вертикальное выравнивание */
+    margin: 10px 0; /* Отступы между товарами */
+}
+
+@media (min-width: 1921px){
+    .account-info .auth-button {
+        max-width: 100%; /* Ограничение ширины кнопки */
+        overflow: hidden; /* Скрытие переполнения */
+        box-sizing: border-box; /* Учет отступов и границ в ширине */
+        padding: 10px 15px; /* Отступы внутри кнопки */
+        border: none; /* Убираем границу */
+        border-radius: 5px; /* Скругление углов кнопки */
+        background-color: #FF89AA; /* Цвет фона кнопки */
+        color: white; /* Цвет текста кнопки */
+        cursor: pointer; /* Указатель на кнопке */
+    }
+    .auth-button {
+        background-color: #FBEBF1; /* Исходный цвет для неактивной кнопки */
+        color: #FF89AA; /* Исходный цвет текста для неактивной кнопки */
+        border: none; /* Убираем границы */
+        padding: 10px 15px; /* Отступы */
+        cursor: pointer; /* Указатель при наведении */
+        transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+    }
+    
+    .auth-button.active {
+        background-color: #FF89AA; /* Цвет для активной кнопки */
+        color: #ffffff; /* Цвет текста для активной кнопки */
+    }
+    .image img {
+        max-width: 110px;
+    }
+    .basket-bottom{
+        font-size: 16px;
+    }
+    .mini_text{
+        font-size:40px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+    }
+    .nav-section,
+    .contacts-section{
+        margin-left: 35px;
+    }
+    .body {
+        font-size: 56px;
+    }
+    .burger {
+        font-size: 56px;
+    }
+    .basket {
+        font-size: 56px;
+    }
+    footer h1 {
+        font-size: 100px;
+    }
+    footer ol li{
+        font-size: 50px;
+    }
+    .favorites-slider  h2{
+        font-size: 25px;
+    }
+    .favorites-slider ,.basket-slider{
+        max-width: 595px;
+    }
+    .product-info p, .product-info h3,.bottom-text p{
+        font-size: 16px;
+    }
+    .remove{
+        font-size: 14px;
+    }
+    .basket-slider h2 {
+        font-size: 16px; 
+    }
+    .account-info .auth-button {
+        max-width: 100%; /* Ограничение ширины кнопки */
+        overflow: hidden; /* Скрытие переполнения */
+        box-sizing: border-box; /* Учет отступов и границ в ширине */
+        padding: 10px 15px; /* Отступы внутри кнопки */
+        border: none; /* Убираем границу */
+        border-radius: 5px; /* Скругление углов кнопки */
+        background-color: #FF89AA; /* Цвет фона кнопки */
+        color: white; /* Цвет текста кнопки */
+        cursor: pointer; /* Указатель на кнопке */
+    }
+    .auth-button {
+        background-color: #FBEBF1; /* Исходный цвет для неактивной кнопки */
+        color: #FF89AA; /* Исходный цвет текста для неактивной кнопки */
+        border: none; /* Убираем границы */
+        padding: 10px 15px; /* Отступы */
+        cursor: pointer; /* Указатель при наведении */
+        transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+    }
+    
+    .auth-button.active {
+        background-color: #FF89AA; /* Цвет для активной кнопки */
+        color: #ffffff; /* Цвет текста для активной кнопки */
+    }
+    .image img {
+        max-width: 110px;
+    }
+    .basket-bottom{
+        font-size: 16px;
+    }
+    .mini_text{
+        font-size:40px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+    }
+    .nav-section,
+    .contacts-section{
+        margin-left: 35px;
+    }
+    .body {
+        font-size: 56px;
+    }
+    .burger {
+        font-size: 56px;
+    }
+    .basket {
+        font-size: 56px;
+    }
+    footer h1 {
+        font-size: 100px;
+    }
+    footer ol li{
+        font-size: 50px;
+    }
+    .favorites-slider  h2{
+        font-size: 25px;
+    }
+    .favorites-slider ,.basket-slider{
+        max-width: 595px;
+    }
+    .product-info p, .product-info h3,.bottom-text p{
+        font-size: 16px;
+    }
+    .remove{
+        font-size: 14px;
+    }
+    .basket-slider h2 {
+        font-size: 16px; 
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1920px) {
+    .basket-slider h2 {
+        font-size: 16px; 
+    }
+    .image img {
+        max-width: 110px;
+    }
+    .basket-bottom{
+        font-size: 14px;
+    }
+    .mini_text p{
+        font-size:12px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+    }
+    .nav-section,
+    .contacts-section{
+        margin-left: 35px;
+    }
+    .mini_text{
+        font-size:10px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+    }
+    .favorites-slider {
+        max-width: 530px;
+    }
+    .product-info p, .product-info h3{
+        font-size: 16px;
+    }
+    .remove,.bottom-text p{
+        font-size: 16px;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .basket-slider h2 {
+        font-size: 14px; 
+    }
+    .image img {
+        max-width: 95px;
+    }
+    .basket-bottom{
+        font-size: 14px;
+    }
+    .mini_text{
+        font-size:10px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+    }
+    .favorites-slider  h2{
+        font-size: 25px;
+    }
+    .favorites-slider ,.basket-slider{
+        max-width: 530px;
+    }
+    .product-info p{
+        font-size: 16px;
+    }
+    .product-info h3,.bottom-text p,.remove{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .submenu a, .submenu span{
+        font-size: 18px;
+    }
+    .account-info span{
+        font-size: 14px;
+    }
+    .basket-slider h2 {
+        font-size: 14px; 
+    }
+    .image img {
+        max-width: 95px;
+    }
+    .mini_text{
+        font-size:10px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+    }
+    .mini_text p{
+        font-size:10px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+    }
+    .logo-section {
+        text-align: left; /* Выравнивание текста в логотипе */
+        margin-bottom: 20px; /* Отступ снизу для логотипа */
+    }
+    .nav-section,
+    .contacts-section {
+        display: inline-block; 
+        vertical-align: top; 
+    }
+    footer h1 {
+        font-size: 30px; /* Меньший размер шрифта для заголовков */
+    }
+    .favorites-slider  h2{
+        font-size: 18px;
+    }
+    .favorites-slider ,.basket-slider{
+        max-width: 434px;
+    }
+    .product-info p{
+        font-size: 16px;
+    }
+    .product-info h3,.bottom-text p,.remove{
+        font-size: 14px;
+    }
+    .basket-bottom{
+        font-size: 14px;
+    }
+    .basket-product-info {
+        display: flex;
+        flex-direction: column; /* Устанавливаем направление колонок */
+    }
+    
+    .basket-product-info {
+        display: flex;
+        flex-direction: column; /* Устанавливаем направление колонок */
+    }
+    
+    .in-row-container {
+        grid-column: span 2;
+    }
+
+    .in-row {
+        display: flex;
+        align-items: center; /* Выравнивание по вертикали */
+        justify-content: space-between; /* Разделение элементов по краям */
+        gap: 10px; /* Промежуток между элементами */
+    }
+    .basket-product-info {
+        display: grid;
+        grid-template-columns: min-content auto ;
+        flex: 1; /* Занимает оставшееся пространство */
+    }
+
+    .full-width-row {
+        width: 100%; /* Занимает всю ширину */
+        margin-top: 20px; /* Отступ сверху для разделения с предыдущими элементами */
+    }
+}
+
+@media (max-width: 1921px) and (min-width: 1024px){
+    .basket-product-info {
+        display: grid;
+        grid-template-columns: min-content 1fr; /* Первая колонка для изображения, вторая для содержимого */
+        grid-template-rows: auto auto; /* Две строки для первой колонки */
+        gap: 10px; /* Промежуток между колонками */
+    }
+    
+    .image {
+        grid-column: 1; /* Занимает первую колонку */
+        grid-row: span 2; /* Занимает две строки */
+    }
+    
+    .in-row {
+        grid-column: 2; /* Сдвигаем во второй столбец */
+        grid-row: 1; /* Устанавливаем в первую строку */
+        display: flex;
+        align-items: center; /* Выравнивание по вертикали */
+        justify-content: space-between; /* Разделение элементов по краям */
+        gap: 10px; /* Промежуток между элементами */
+    }
+    
+    .quantity-container {
+        grid-column: 2; /* Сдвигаем во второй столбец */
+        grid-row: 2; /* Устанавливаем во вторую строку */
+    }
+    
+    .in-row-container {
+        grid-column: 2; /* Сдвигаем во второй столбец */
+        grid-row: 2; /* Устанавливаем во вторую строку */
+        display: flex;
+        flex-direction: column; /* Располагаем элементы в колонку */
+    }
+}
+@media (max-width: 1921px) and (min-width: 760px){
+    .burger-icon{
+        height: 3px;
+    }
+    .account-info .auth-button {
+        max-width: 100%; /* Ограничение ширины кнопки */
+        overflow: hidden; /* Скрытие переполнения */
+        box-sizing: border-box; /* Учет отступов и границ в ширине */
+        border: none; /* Убираем границу */
+        color: FF89AA; /* Цвет текста кнопки */
+        cursor: pointer; /* Указатель на кнопке */
+        text-decoration: underline;
+    }
+.submenu a{
+    padding: 2px 15px; 
+}
+/* basket */
+.submenu a, .submenu span{
+    font-size: 18px;
+}
+.account-info span{
+    font-size: 14px;
+}
+.basket-product-info h2 {
+    margin-right:15px; /* Отступы */
+    margin: 0;
+}
+
+
+.price {
+    font-size: 16px; /* Размер цены */
+    color: #FF89AA; /* Цвет цены */
+    margin: 0; /* Убираем отступы */
+}
+
+
+
+
+.image img {
+    border-radius: 8px; /* Радиус углов изображения */
+}
+
+.quantity-container {
+    display: flex; /* Горизонтальное выравнивание кнопок */
+    align-items: center; /* Вертикальное выравнивание */
+ grid-column: 1; /* Первая колонка */
+    grid-row: 4; /* Четвертый ряд */
+    margin: 0px;
+}
+
+.minus, .plus {
+    cursor: pointer; /* Указатель при наведении */
+    border: none; /* Убираем рамку */
+    margin: 0 5px; /* Отступы между кнопками */
+}
+
+.quantity {
+    padding: 5px 10px; /* Отступы */
+}
+
+.name-on-keychain {
+    font-size: 14px; /* Размер текста */
+    color: #494747; /* Цвет текста */
+    margin: 0; /* Отступы */
+}
+
+.gift-option {
+    margin-left: auto; /* Сдвигает второй элемент вправо */
+}
+}
+
+@media(max-width:760px){
+    .burger-icon{
+        height: 2px;
+    }
+    .boxes_on_the_bottom {
+        flex-direction: column;
+        width:100%;
+        gap:20px;
+    }
+    .box{width:100%;}
+    .submenu a, .submenu span{
+        font-size: 18px;
+        font-weight: 500;
+        font-family: 'Jost';
+    }
+    .menu-text{
+        display: none;
+    }
+    .submenu a{
+        padding: 2px 15px; 
+    }
+    .account-info span{
+        font-size: 14px;
+    }
+    .basket-slider h2 {
+        font-size: 14px; 
+        margin: 0;
+    }
+    .image img {
+        max-width: 80px;
+    }
+    .favorites-slider  h2{
+        font-size: 25px;
+    }
+    .favorites-slider ,.basket-slider{
+        width:100%;
+    }
+    .product-info p{
+        font-size: 16px;
+    }
+    .product-info h3,.bottom-text p,.remove{
+        font-size: 14px;
+    }
+    .basket-bottom{
+        font-size: 14px;
+    }
+}

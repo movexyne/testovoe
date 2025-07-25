@@ -1,0 +1,1571 @@
+@font-face {
+    font-family: 'Futura PT';
+    src: url('../fonts/FuturaCyrillicBook.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'IvyPresto Headline'; /* Название шрифта */
+    src: url('../fonts/IvyPrestoDisplay-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+}
+
+/*//////////////////*/
+.s1 *, .s2 *, .s3 * {
+    text-align: left;
+    overflow: hidden; 
+    white-space: wrap;
+}
+.section span {
+    padding-bottom: 10px;
+}
+.second {
+    margin: 0 auto;
+}
+.section.s2 {
+    border-radius: 8px;
+    padding: 20px;
+}
+        /* Общие настройки заголовков */
+        .s1 h1, .s2 h1, .s3 h1 {
+            font-weight: 300;
+            font-family: 'IvyPresto Headline';
+            display:block;
+            width:100%;
+            margin-bottom:0;
+        }
+        .s1 h2, .s2 h2, .s3 h2,
+        .s1 h3, .s2 h3, .s3 h3,
+        .s1 h4, .s2 h4, .s3 h4,
+        .s1 h5, .s2 h5, .s3 h5  {
+            font-weight: 300;
+            font-family: 'IvyPresto Headline';
+            margin:0;
+        }
+/*\\\\\\\\\\\\\\\\\\*/
+
+/* Media query for screens larger than 1920px */
+@media (min-width: 1921px) {
+    .names_of_shops{
+        font-size: 25px;
+        font-weight: 300;
+        font-style: italic;
+        font-family: 'IvyPresto Headline';
+    }
+    .mini_text{
+        font-size:40px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+        font-size: 10px;
+    }
+    
+    .in_row{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .nav-section,
+    .contacts-section{
+        margin-left: 18px;
+    }
+    .body {
+        font-size: 16px;
+    }
+    .top-line {
+        font-size: 18px;
+    }
+    .burger {
+        font-size: 18px;
+    }
+    .basket {
+        font-size: 18px;
+    }
+    .colorful-text {
+        font-size: 110px;
+    }
+   
+    .colored-letter .first{
+        font-size: 50px;
+    }
+    .colored-letter .second{
+        font-size: 70px;
+    }
+    
+    footer h1 {
+        font-size: 40px;
+    }
+    footer ol li{
+        font-size: 16px;
+    }
+    .logo-section p{
+        font-size: 16px;
+    }
+     
+    .s2:nth-of-type(1) 
+    { 
+        background-color: #EEFF81;
+        color: #494747;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        
+    } 
+    
+    .s2:nth-of-type(2){
+        background: #FF89AA;
+        color: #FFFFFF;
+    }
+    .s2:nth-of-type(3){
+        background: #FBEBF1;
+        color: #494747;
+    }
+    
+    .s2:nth-of-type(2) span {
+        flex: 1 1 40%;
+        text-align: left;
+        
+    }
+    
+    .section.s2 {
+        display: flex;
+        flex-direction: column; /* Stack children vertically */
+    }
+    
+    .span-container {
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping */
+        width: 100%;
+    }
+    
+    .span-container span {
+        flex: 0 1 calc(50% - 15px); /* Two columns with gap consideration */
+        min-width: 200px; /* Minimum width for each column */
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        text-align: left;
+    }
+    
+    .s3:nth-of-type(1) 
+    { 
+        background-color: #FF7D01; 
+        color: #FFFFFF; 
+    } 
+    .s3:nth-of-type(2) 
+    { 
+        background-color: #FBEBF1; 
+        color: #494747; 
+    }
+    
+    /* Первая часть (трехколоночная секция) */
+    .section.s1 {
+        flex: 3;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: left;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: 'Jost';
+        flex-direction: column;
+        
+    }
+    /* Вторая часть (двухколоночная секция) */
+    .section.s2 {
+        flex: 2;
+        display: flex;
+        flex-wrap: wrap;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: left;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: 'Jost';
+        
+    }
+
+    /* Третья часть (широкая секция) */
+    .section.s3 {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr); /* Делаем 5 колонок */
+        gap: 20px; /* Промежуток между колонками */
+        width: 100%;
+        text-align: left;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: left;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: 'Jost';
+    }
+
+    .s1:nth-of-type(2) button,
+    .s2:nth-of-type(1) button
+    {
+        background-color: #FF89AA;
+        color: #FFFFFF;
+        padding: 20px;
+        font-family: 'Futura PT','Jost';
+        font-size: 14px;
+        font-weight: 500;
+        border: none;
+        border-radius: 4px;
+        width: 100%;
+        text-align: center;
+        display: block; 
+        margin: 20px auto;
+    }
+    .s1:nth-of-type(3) button{
+        background-color: #FFFFFF; 
+        color: #FF89AA;
+        padding: 20px;
+        font-family: 'Futura PT','Jost';
+        font-size: 14px;
+        font-weight: 500;
+        border: none;
+        border-radius: 4px;
+        width: 100%;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .section.s3:nth-of-type(1) h1{
+        display: block;
+        width: 100%;
+    }
+
+    .s1:nth-of-type(1),
+    .s1:nth-of-type(2) 
+    { 
+        background-color: #FBEBF1; 
+    } 
+    .s2:nth-of-type(2){
+        background: #FF89AA;
+        color: #FFFFFF;
+    }
+    .s1:nth-of-type(3) 
+    { 
+        background-color: #FF89AA; 
+        color:#ffffff;
+    } 
+    .s2:nth-of-type(1) 
+    { 
+        background-color: #EEFF81;
+        color: #494747;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    } 
+    
+    .section:nth-of-type(5) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; /* Равномерное распределение */
+        gap: 20px;
+    }
+    
+    .s2:nth-of-type(2) span {
+        flex: 1 1 40%;
+        text-align: left;
+        
+    }
+    .s2:nth-of-type(3) span {
+        flex: 1 100%;
+        text-align: left;
+    }
+    
+    .section.s2 {
+        display: flex;
+        flex-direction: column; /* Stack children vertically */
+        gap: 20px; /* Space between elements */
+    }
+    
+    .span-container {
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping */
+        width: 100%;
+    }
+    
+    .span-container span {
+        flex: 0 1 calc(50% - 15px); /* Two columns with gap consideration */
+        min-width: 200px; /* Minimum width for each column */
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        text-align: left;
+    }
+    
+    .s2:nth-of-type(3) 
+    { 
+        background-color: #FBEBF1; 
+        color: #494747; 
+    } 
+    .s3:nth-of-type(1) 
+    { 
+        background-color: #FF7D01; 
+        color: #FFFFFF; 
+    } 
+    .s3:nth-of-type(2) 
+    { 
+        background-color: #FBEBF1; 
+        color: #494747; 
+    }
+
+
+    /* Блоки 1, 2 и 3 в ряд */
+    .flex-row-1, .flex-row-2{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap:20px;
+    }
+
+    .s1:nth-of-type(1),
+    .s1:nth-of-type(2),
+    .s1:nth-of-type(3),
+    .s2:nth-of-type(1),
+    .s2:nth-of-type(2),
+    .s2:nth-of-type(3)  {
+        flex: 1;
+        min-width: 300px;
+        max-width: 32%;
+        text-align: center;
+    }
+    
+    .s3:nth-of-type(1),
+    .s3:nth-of-type(2){
+        min-width: 300px;
+        max-width: 100%;
+        margin-bottom: 1%;
+    }
+   
+    /* Блоки 4, 5, 6 в ряд */
+   
+
+    /* Блоки 7 и 8 в колонке */
+    .flex-column {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .flex-row-3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .section.s3:nth-of-type(1) {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr); /* Делаем 5 колонок */
+        gap: 20px; /* Промежуток между колонками */
+        width: 100%;
+        text-align: left;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: left;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: 'Jost';
+    }
+    .section.s3:nth-of-type(1) h1,
+    .section.s3:nth-of-type(2) h1
+    {
+        grid-column: span 6;
+        
+    }
+
+    .section.s3 span {
+        display: block; /* Make span elements block-level */
+        width: 100%; /* Ensure spans take full width */
+       
+    }
+
+    /* Общие настройки заголовков */
+    .s1 h1, .s2 h1, .s3 h1 {
+    font-size: 70px;
+}
+
+.s1 h2, .s2 h2, .s3 h2 {
+    font-size: 50px;
+}
+
+.s1 h3, .s2 h3, .s3 h3 {
+    font-size: 30px;
+}
+.s1 h4, .s2 h4, .s3 h4{
+    font-size: 35px;
+}
+
+.s1 h5, .s2 h5, .s3 h5  {
+    font-size: 30px;
+}
+.s2:nth-of-type(1) button{
+    margin-top: 10px;
+}
+}
+
+/*.................................*/
+
+@media (min-width: 1440px) and (max-width: 1920px) {
+    
+    .names_of_shops{
+        font-size: 25px;
+        font-weight: 300;
+        font-style: italic;
+        font-family: 'IvyPresto Headline';
+    }
+    
+    
+    /* Первая часть (трехколоночная секция) */
+    .section.s1 {
+        display: flex;
+        flex: 3;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: left;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: 'Jost';
+        flex-direction: column;
+    }
+    /* Вторая часть (двухколоночная секция) */
+    .section.s2 {
+        flex: 2;
+        display: flex;
+        flex-wrap: wrap;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: left;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: 'Jost';
+    }
+
+    /* Третья часть (широкая секция) */
+    .section.s3 {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); /* Делаем 5 колонок */
+        gap: 20px; /* Промежуток между колонками */
+        width: 100%;
+        text-align: left;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: left;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: 'Jost';
+    }
+    
+    .s2:nth-of-type(2){
+        background: #FF89AA;
+        color: #FFFFFF;
+    }
+    .s2:nth-of-type(3){
+        background: #FBEBF1;
+        color: #494747;
+    }
+
+    .section.s3:nth-of-type(1) h1{
+        display: block;
+        width: 100%;
+    }
+    .button-container {
+        width: 100%;
+        margin-top: auto; /* Смещает контейнер вниз */
+        display: flex; /* Для центрирования кнопки, если нужно */
+        justify-content: center; /* Центрирует кнопку */
+    }
+    .button-container a {
+        width: 100%; /* Ссылка занимает всю ширину контейнера */
+    }
+    
+    .button-container button {
+        width: 100%; /* Кнопка занимает всю ширину ссылки */
+    }
+    .section.s1 a button {
+        align-self: flex-end; /* Смещает кнопку вниз */
+        text-align: center;
+    }
+    .s1:nth-of-type(2) button,
+    .s2:nth-of-type(1) button
+    {
+        background-color: #FF89AA;
+        color: #FFFFFF;
+        padding: 20px;
+        font-family: 'Futura PT','Jost';
+        font-size: 14px;
+        font-weight: 500;
+        border: none;
+        border-radius: 4px;
+        width: 100%;
+        text-align: center;
+        display: block; 
+        margin-top: auto;
+        align-self: flex-end;
+    }
+    .s2:nth-of-type(1) button{
+        margin-top: 10px;
+    }
+    .s1:nth-of-type(3) button{
+        background-color: #FFFFFF; 
+        color: #FF89AA;
+        padding: 20px;
+        font-family: 'Futura PT','Jost';
+        font-size: 14px;
+        font-weight: 500;
+        border: none;
+        border-radius: 4px;
+        width: 100%;
+        margin: 20px auto;
+        text-align: center;
+    }
+    .s1:nth-of-type(1),
+    .s1:nth-of-type(2) 
+    { 
+        background-color: #FBEBF1; 
+        height: 100%;
+    } 
+    
+    .s1:nth-of-type(3) 
+    { 
+        background-color: #FF89AA; 
+        color:#ffffff;
+    } 
+    .s2:nth-of-type(1) 
+    { 
+        background-color: #EEFF81;
+        color: #494747;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    } 
+    
+    .s2:nth-of-type(2) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; /* Равномерное распределение */
+        gap: 20px;
+    }
+    
+    .s2:nth-of-type(2) span {
+        flex: 1 1 40%;
+        text-align: left;
+    }
+
+    .s2:nth-of-type(3) span {
+        flex: 1 1 45%;
+        text-align: left;
+    }
+    
+    .section.s2 {
+        display: flex;
+        flex-direction: column; /* Stack children vertically */
+        gap: 20px; /* Space between elements */
+    }
+    
+    .span-container {
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping */
+        width: 100%;
+    }
+    
+    .span-container span {
+        flex: 0 1 calc(50% - 15px); /* Two columns with gap consideration */
+        min-width: 200px; /* Minimum width for each column */
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        text-align: left;
+    }
+    
+    .section:nth-of-type(6) 
+    { 
+        background-color: #FBEBF1; 
+        color: #494747; 
+    } 
+    .s3:nth-of-type(1) 
+    { 
+        background-color: #FF7D01; 
+        color: #FFFFFF; 
+    } 
+    .s3:nth-of-type(2) 
+    { 
+        background-color: #FBEBF1; 
+        color: #494747; 
+    }
+
+  
+
+    /* Блоки 1, 2 и 3 в ряд */
+    .flex-row-1 {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .s3:nth-of-type(1),
+    .s3:nth-of-type(2){
+        min-width: 300px;
+        max-width: 100%;
+        margin-bottom: 1%;
+    }
+
+    /* Блоки 4, 5, 6 в ряд */
+    .flex-row-2 {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .s1:nth-of-type(1),
+    .s1:nth-of-type(2),
+    .s1:nth-of-type(3),
+    .s2:nth-of-type(1),
+    .s2:nth-of-type(2),
+    .s2:nth-of-type(3) {
+        flex: 1;
+        min-width: 300px;
+        max-width: 32%;
+    }
+
+    /* Блоки 7 и 8 в колонке */
+    .flex-column {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .s3:nth-of-type(1),
+    .s3:nth-of-type(2) {
+        width: 100%;
+        margin:10px auto;
+    }
+
+    .flex-row-3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+
+    .section.s3:nth-of-type(1) h1,
+    .section.s3:nth-of-type(2) h1
+    {
+        grid-column: span 5;
+        
+    }
+
+    .section.s3 span {
+        display: block; /* Make span elements block-level */
+        width: 100%; /* Ensure spans take full width */
+       
+    }
+    
+        /* Общие настройки заголовков */
+        .s1 h1, .s2 h1, .s3 h1 {
+        font-size: 50px;
+        font-weight: 300;
+        font-family: 'IvyPresto Headline';
+        display:block;
+        width:100%;
+        margin-bottom:0;
+        text-align: center;
+    }
+
+    .s1 h2, .s2 h2, .s3 h2 {
+        font-size: 40px;
+    }
+
+    .s1 h3, .s2 h3, .s3 h3 {
+        font-size: 30px;
+    }
+    .s1 h4, .s2 h4, .s3 h4{
+        font-size: 35px;
+    }
+
+    .s1 h5, .s2 h5, .s3 h5  {
+        font-size: 30px;
+    }
+    
+}
+
+
+/* Media query for screens between 1024px and 1440px */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .names_of_shops{
+        font-size: 25px;
+        font-weight: 300;
+        font-style: italic;
+        font-family: 'IvyPresto Headline';
+    }
+    .colored-letter .first{
+        font-size: 40px;
+    }
+    .colored-letter .second{
+        font-size: 50px;
+    }
+    
+    .in_row{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .nav-section,
+    .contacts-section{
+        margin-left: 35px;
+    }
+    .mini_text p{
+        font-size:10px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .in_row{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .nav-section,
+    .contacts-section{
+        margin-left: 35px;
+    }
+
+    .mini_text{
+        font-size:10px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+    }
+
+ 
+    /* Первая часть (трехколоночная секция) */
+    .section.s1 {
+        flex: 3;
+        gap: 10px;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: left;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: 'Jost';
+        flex-direction: column;
+        
+    }
+    /* Вторая часть (двухколоночная секция) */
+    .section.s2 {
+        flex: 3;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: left;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: 'Jost';
+        
+    }
+
+    /* Третья часть (широкая секция) */
+    .section.s3 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Убедитесь, что здесь 4 колонки */
+        gap: 20px; /* Промежуток между колонками */
+        width: 100%;
+        text-align: left;
+        padding: 20px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: 'Jost';
+    }
+
+    .s2:nth-of-type(2){
+        background: #FF89AA;
+        color: #FFFFFF;
+    }
+    .s2:nth-of-type(3){
+        background: #FBEBF1;
+        color: #494747;
+    }
+
+    .section.s3:nth-of-type(1) h1{
+        display: block;
+        width: 100%;
+    }
+    .s2:nth-of-type(1) button{
+        margin-top: 10px;
+    }
+    .s1:nth-of-type(2) button,
+    .s2:nth-of-type(1) button
+    {
+        background-color: #FF89AA;
+        color: #FFFFFF;
+        padding: 20px;
+        font-family: 'Futura PT','Jost';
+        font-size: 14px;
+        font-weight: 500;
+        border: none;
+        border-radius: 4px;
+        width: 100%;
+        text-align: center;
+        display: block; 
+        margin: 20px auto;
+    }
+    .s1:nth-of-type(3) button{
+        background-color: #FFFFFF; 
+        color: #FF89AA;
+        padding: 20px;
+        font-family: 'Futura PT','Jost';
+        font-size: 14px;
+        font-weight: 500;
+        border: none;
+        border-radius: 4px;
+        width: 100%;
+        margin: 20px auto;
+        text-align: center;
+    }
+    .s1:nth-of-type(1),
+    .s1:nth-of-type(2) 
+    { 
+        background-color: #FBEBF1; 
+    } 
+    
+    .s1:nth-of-type(3) 
+    { 
+        background-color: #FF89AA; 
+        color:#ffffff;
+    } 
+    .s2:nth-of-type(1) 
+    { 
+        background-color: #EEFF81;
+        color: #494747;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    } 
+    
+    .s2:nth-of-type(2) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; /* Равномерное распределение */
+        gap: 20px;
+    }
+    
+    .s2:nth-of-type(2) span {
+        flex: 1 1 40%;
+        text-align: left;
+    }
+
+    .s2:nth-of-type(3) span {
+        flex: 1 100%;
+        text-align: left;
+    }
+    
+    .section.s2 {
+        display: flex;
+        flex-direction: column; /* Stack children vertically */
+    }
+    
+    .span-container {
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping */
+        width: 100%;
+    }
+    
+    .span-container span {
+        flex: 0 1 calc(50% - 15px); /* Two columns with gap consideration */
+        min-width: 200px; /* Minimum width for each column */
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        text-align: left;
+    }
+    
+    .s2:nth-of-type(3) 
+    { 
+        background-color: #FBEBF1; 
+        color: #494747; 
+    } 
+    .s3:nth-of-type(1) 
+    { 
+        background-color: #FF7D01; 
+        color: #FFFFFF; 
+    } 
+    .s3:nth-of-type(2) 
+    { 
+        background-color: #FBEBF1; 
+        color: #494747; 
+    }
+
+   
+
+    /* Блоки 1, 2 и 3 в ряд */
+    .flex-row-1, .flex-row-2{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap:20px;
+    }
+    
+    .s1:nth-of-type(1),
+    .s1:nth-of-type(2),
+    .s1:nth-of-type(3),
+    .s2:nth-of-type(1),
+    .s2:nth-of-type(2),
+    .s2:nth-of-type(3)  {
+        flex: 1;
+        min-width: 100px;
+        max-width: 32%;
+        text-align: center;
+    }
+    
+    .s3:nth-of-type(1),
+    .s3:nth-of-type(2){
+        min-width: 100px;
+        max-width: 100%;
+        margin-bottom: 1%;
+    }
+
+    /* Блоки 4, 5, 6 в ряд */
+   
+
+    /* Блоки 7 и 8 в колонке */
+    .flex-column {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .s3:nth-of-type(1),
+    .s3:nth-of-type(2) {
+        width: 100%;
+        margin:10px auto;
+    }
+
+    .flex-row-3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+  
+    .section.s3:nth-of-type(1) h1,
+    .section.s3:nth-of-type(2) h1
+    {
+        grid-column: span 4;
+        
+    }
+
+    .section.s3 span {
+        display: block; /* Make span elements block-level */
+        width: 100%; /* Ensure spans take full width */
+        
+    }
+        /* Общие настройки заголовков */
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+    h4{
+        font-size: 35px;
+    }
+    h3 {
+        font-size: 30px;
+    }
+
+    h5 {
+        font-size: 30px;
+    }
+}
+
+/* Media query for screens smaller than 1024px */
+@media (max-width: 1024px) and (min-width:361px){
+    
+    .names_of_shops{
+        font-size: 25px;
+        font-weight: 300;
+        font-style: italic;
+        font-family: 'IvyPresto Headline';
+        margin: 0px;
+    }
+
+    /* Первая часть (трехколоночная секция) */
+    .section.s1 {
+        
+        background: #ffffff;
+        padding: 10px;
+        border-radius: 8px;
+        text-align: left;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: 'Jost';
+        flex-direction: column;
+        
+    }
+    /* Вторая часть (двухколоночная секция) */
+    .section.s2 {
+        border-radius: 8px;
+        padding: 20px;
+        grid-template-columns: repeat(3, 1fr); 
+    }
+
+    /* Третья часть (широкая секция) */
+    .section.s3 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Делаем 5 колонок */
+        gap: 10px; /* Промежуток между колонками */
+        width: 100%;
+        text-align: left;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: left;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: 'Jost';
+    }
+
+    .s2:nth-of-type(2){
+        background: #FF89AA;
+        color: #FFFFFF;
+    }
+    .s2:nth-of-type(3){
+        background: #FBEBF1;
+        color: #494747;
+    }
+
+    .section.s3:nth-of-type(1) h1{
+        display: block;
+        width: 100%;
+    }
+    .s2:nth-of-type(1) button{
+        margin-top: 10px;
+    }
+    .s1:nth-of-type(2) button,
+    .s2:nth-of-type(1) button
+    {
+        background-color: #FF89AA;
+        color: #FFFFFF;
+        padding: 20px;
+        font-family: 'Futura PT','Jost';
+        font-size: 14px;
+        font-weight: 500;
+        border: none;
+        border-radius: 4px;
+        text-align: center;
+        display: block; 
+        width: 100%;
+        margin: 20px auto;
+    }
+    .s1:nth-of-type(3) button{
+        background-color: #FFFFFF; 
+        color: #FF89AA;
+        padding: 20px;
+        font-family: 'Futura PT','Jost';
+        font-size: 14px;
+        font-weight: 500;
+        border: none;
+        border-radius: 4px;
+        width: 100%;
+        margin: 20px auto;
+        text-align: center;
+    }
+    .s1:nth-of-type(1),
+    .s1:nth-of-type(2) 
+    { 
+        background-color: #FBEBF1; 
+    } 
+    
+    .s1:nth-of-type(3) 
+    { 
+        background-color: #FF89AA; 
+        color:#ffffff;
+    } 
+    .s2:nth-of-type(1) 
+    { 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 4 колонки */
+        gap: 20px; /* Промежуток между колонками */
+        background: #ffffff;
+        padding: 10px;
+        border-radius: 8px;
+        text-align: left;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: 'Jost';
+        background-color: #EEFF81;
+        color: #494747;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap:5%;
+    } 
+    .s2 .span-large{
+        display: grid;
+        grid-row: span 2; /* Занимает 2 колонки в высоту */
+        overflow: hidden; 
+        white-space: wrap; 
+    }
+    
+    .s2:nth-of-type(2) span,
+    .s2:nth-of-type(3) span
+    {
+        min-width: 300px;
+        max-width: 100%;
+        margin-bottom: 1%;
+    }
+
+
+    .span-container {
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping */
+        gap: 15px; /* Space between items */
+        width: 100%;
+    }
+    
+    .span-container span {
+        flex: 0 1 calc(50% - 15px); /* Two columns with gap consideration */
+        min-width: 200px; /* Minimum width for each column */
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        text-align: left;
+    }
+    
+    .section:nth-of-type(6) 
+    { 
+        background-color: #FBEBF1; 
+        color: #494747; 
+    } 
+    .s3:nth-of-type(1) 
+    { 
+        background-color: #FF7D01; 
+        color: #FFFFFF; 
+    } 
+    .s3:nth-of-type(2) 
+    { 
+        background-color: #FBEBF1; 
+        color: #494747; 
+    }
+
+    
+
+    /* Блоки 1, 2 и 3 в ряд */
+    .flex-row-1 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap:20px;
+    }
+
+    
+    .s3:nth-of-type(1),
+    .s3:nth-of-type(2){
+        min-width: 300px;
+        max-width:100%;
+        margin-bottom: 1%;
+    }
+
+    /* Блоки 4, 5, 6 в ряд */
+    .flex-row-2 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap:20px;
+    }
+
+
+    /* Блоки 7 и 8 в колонке */
+    .flex-column {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .s3:nth-of-type(1),
+    .s3:nth-of-type(2) {
+        width: 100%;
+        margin:10px auto;
+    }
+
+    .flex-row-3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .section.s3 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Делаем 5 колонок */
+        gap: 20px; /* Промежуток между колонками */
+        width: 100%;
+        text-align: left;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: left;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: 'Jost';
+    }
+
+    .section.s3:nth-of-type(1) h1{
+        display: block;
+        width: 100%;
+    }
+   
+        /* Общие настройки заголовков */
+        .s1 h1, .s2 h1, .s3 h1 {
+    font-size: 40px;
+}
+
+.s1 h2, .s2 h2, .s3 h2{
+    font-size: 30px;
+}
+ .s1 h4, .s2 h4, .s3 h4{
+    font-size: 30px;
+}
+.s1 h3, .s2 h3, .s3 h3 {
+    font-size: 25px;
+}
+
+.s1 h5, .s2 h5, .s3 h5 {
+    font-size: 20px;
+}
+}
+
+
+@media (max-width: 360px){
+    
+        .colored-letter{
+            font-size: 30px;
+        }
+        /**************************/
+    .in_row{
+        display: flex;
+        justify-content: flex-start;
+        justify-content: space-between;
+    }
+    button{
+        white-space: normal; /* позволяет перенести текст на новую строку */
+    word-wrap: break-word; /* переносит слова, если они длинные */
+    overflow-wrap: break-word; /* альтернатива для совместимости */
+    text-align: center; /* выравнивание текста по центру */
+    }
+    
+ 
+    /* Первая часть (трехколоночная секция) */
+    .section.s1 {
+        flex: 3;
+        gap: 10px;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: left;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: 'Jost';
+        flex-direction: column;
+    }
+    /* Вторая часть (двухколоночная секция) */
+    .section.s2 {
+        flex: 3;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: left;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: 'Jost';
+        
+    }
+
+    /* Третья часть (широкая секция) */
+    .section.s3 {
+        flex: 3;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: left;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: 'Jost';
+    }
+
+    .s2:nth-of-type(2){
+        background: #FF89AA;
+        color: #FFFFFF;
+    }
+    .s2:nth-of-type(3){
+        background: #FBEBF1;
+        color: #494747;
+    }
+
+    .section.s3:nth-of-type(1) h1{
+        display: block;
+        width: 100%;
+    }
+    .s2:nth-of-type(1) button{
+        margin-top: 10px;
+    }
+    .s1:nth-of-type(2) button,
+    .s2:nth-of-type(1) button
+    {
+        background-color: #FF89AA;
+        color: #FFFFFF;
+        padding: 20px;
+        font-family: 'Futura PT','Jost';
+        font-size: 14px;
+        font-weight: 500;
+        border: none;
+        border-radius: 4px;
+        width: 100%;
+        text-align: center;
+        display: block; 
+        margin: 20px auto;
+    }
+    .s1:nth-of-type(3) button{
+        background-color: #FFFFFF; 
+        color: #FF89AA;
+        padding: 20px;
+        font-family: 'Futura PT','Jost';
+        font-size: 14px;
+        font-weight: 500;
+        border: none;
+        border-radius: 4px;
+        width: 100%;
+        margin: 20px auto;
+        text-align: center;
+    }
+    .s1:nth-of-type(1),
+    .s1:nth-of-type(2) 
+    { 
+        background-color: #FBEBF1; 
+    } 
+    
+    .s1:nth-of-type(3) 
+    { 
+        background-color: #FF89AA; 
+        color:#ffffff;
+    } 
+    .s2:nth-of-type(1) 
+    { 
+        background-color: #EEFF81;
+        color: #494747;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        
+    } 
+    
+    .s2:nth-of-type(2) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; /* Равномерное распределение */
+        
+    }
+    
+    .s2:nth-of-type(2) span {
+        flex: 1 1 40%;
+        text-align: left;
+    }
+
+    .s2:nth-of-type(3) span {
+        flex: 1 100%;
+        text-align: left;
+    }
+    
+    .section.s2 {
+        display: flex;
+        flex-direction: column; /* Stack children vertically */
+        gap: 20px; /* Space between elements */
+    }
+    
+    .span-container {
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping */
+        gap: 15px; /* Space between items */
+        width: 100%;
+    }
+    
+    .span-container span {
+        flex: 0 1 calc(50% - 15px); /* Two columns with gap consideration */
+        min-width: 200px; /* Minimum width for each column */
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        text-align: left;
+    }
+    
+    .section:nth-of-type(6) 
+    { 
+        background-color: #FBEBF1; 
+        color: #494747; 
+    } 
+    .s3:nth-of-type(1) 
+    { 
+        background-color: #FF7D01; 
+        color: #FFFFFF; 
+    } 
+    .s3:nth-of-type(2) 
+    { 
+        background-color: #FBEBF1; 
+        color: #494747; 
+    }
+
+
+    /* Блоки 1, 2 и 3 в ряд */
+    .flex-row-1 {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .s1:nth-of-type(1),
+    .s1:nth-of-type(2),
+    .s1:nth-of-type(3),
+    .s2:nth-of-type(1),
+    .s2:nth-of-type(2),
+    .s2:nth-of-type(3),
+    .s3:nth-of-type(1),
+    .s3:nth-of-type(2){
+        max-width: 100%;
+        margin-bottom: 1%;
+    }
+
+    /* Блоки 4, 5, 6 в ряд */
+    .flex-row-2 {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+    /* Блоки 7 и 8 в колонке */
+    .flex-column {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .s3:nth-of-type(1),
+    .s3:nth-of-type(2) {
+        width: 100%;
+        margin:10px auto;
+    }
+
+    .flex-row-3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+   
+    .section.s3:nth-of-type(1) h1,
+    .section.s3:nth-of-type(2) h1
+    {
+        grid-column: span 2;
+        
+    }
+
+    .section.s3 span {
+        display: block; /* Make span elements block-level */
+        width: 100%; /* Ensure spans take full width */
+       
+    }
+    .names_of_shops{
+        font-size: 20px;
+        font-weight: 300;
+        font-style: italic;
+        font-family: 'IvyPresto Headline';
+    }
+
+    .s1 p, .s2 p, .s3 p{
+        font-size: 14px;
+    }
+    .s1 h5, .s2 h5, .s3 h5, 
+    .s1 h2, .s2 h2, .s3 h2,
+    .s1 h1, .s2 h1, .s3 h1{
+        font-size: 20px;
+        word-wrap: normal;
+    }
+    
+    .s1 p, .s2 p, .s3 p{
+        font-size: 14px;
+    }
+    .s1 h5, .s2 h5, .s3 h5, 
+    .s1 h2, .s2 h2, .s3 h2
+    {
+        font-size: 20px;
+        word-wrap: normal;
+    }
+    .s1 h1, .s2 h1, .s3 h1{
+        font-size: 30px;
+    }
+}
+    @media(max-width:500px){
+        h4{
+            font-size: 25px;
+        }
+        .s2:nth-of-type(1),
+    .s2:nth-of-type(2),
+    .s2:nth-of-type(3){
+        max-width: 100%;
+        margin-bottom: 1%;
+    }
+    section.s2 {
+        display: flex
+;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .section.s2 {
+        flex: 3;
+        display: flex
+;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: left;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: 'Jost';
+    }
+}
+
+@media (max-width: 360px) {
+    .section.s3 br {
+        display: none;
+    }
+}

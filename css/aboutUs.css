@@ -1,0 +1,904 @@
+@font-face {
+    font-family: 'IvyPresto Headline'; /* Название шрифта */
+    src: url('../fonts/IvyPrestoDisplay-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Jost';
+    src: url('../fonts/Jost-Medium.ttf') format('truetype');
+    font-weight: 500; /* Medium */
+}
+
+body {
+    font-family: 'Jost';
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr; /* 1 колонка */
+    grid-auto-rows: auto; /* Автоматическая высота строк */
+    font-weight: 500;
+    color: #494747;
+    font-size: 16px;
+    overflow: auto; 
+    white-space: normal; 
+    box-sizing: border-box;
+    overflow-x: hidden; /* Скрытие горизонтальной прокрутки */
+    overflow-wrap: break-word; /* Перенос длинных слов */
+}
+
+.hero {
+    height: auto;
+    width: 90%;
+    margin: 10px auto 0 auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+  .headline {
+    text-align: center;
+    color: #FF5A9E;
+    margin-top: 30px;
+  }
+.top-text{
+    width:100%;
+    text-align: center;
+}
+ .about-us-content {
+    width: 100%;
+    margin: 40px auto;
+    padding: 0 1%;
+  }
+  .about-us-content span {
+    overflow-wrap: break-word;
+    white-space: normal;
+    word-break: break-word;
+}
+
+  .first-box {
+    display: flex;
+    gap: 10px;
+}
+
+.pink-box {
+    display: flex;               
+    flex-direction: column;     
+    justify-content: center;      
+    align-items: center;          
+    background-color: #FFF2F6;
+    padding: 30px;
+    border-radius: 8px;
+    border: 2px solid #FF498A;   
+    text-align: center;
+    max-width: 600px;            
+    margin: 0 auto;              
+    height: auto;                 
+    gap: 20px;
+}
+
+
+.pink-box-image {
+    display: grid;
+    gap: 10px;
+    width: 100%;
+}
+
+.pink-box-image img,.bottom-box img:nth-child(2) {
+    width: 100%;
+    height: auto; 
+    max-height: 100%; 
+    object-fit: cover; 
+}
+
+.pink-box h1 {
+    color: #FF5A9E;
+    font-style: italic;
+    font-weight: 300;
+    font-family: 'IvyPresto Headline';
+}
+
+.pink-box p {
+    line-height: 1.6;
+    color: #333;
+    text-align: center;
+}
+.middle-first-box {
+    display: flex;                /* Используем Flexbox для родительского контейнера */
+    align-items: stretch;         /* Растягиваем элементы по высоте */
+}
+
+.dark-pink-box {
+    width: 45%;                   /* Ширина блока */
+    display: flex;                /* Включаем Flexbox */
+    flex-direction: column;       /* Устанавливаем направление столбцом */
+    justify-content: center;       /* Центрируем по вертикали */
+    align-items: center;           /* Центрируем по горизонтали */
+    background-color: #FF498A;
+    color: #FFFFFF;
+    padding: 30px;
+    border-radius: 25px;
+    border: none;
+    text-align: center;
+    height: auto;                 /* Высота автоматически подстраивается под содержимое */
+}
+
+.middle-first-box img {
+    width: 55%;                   /* Ширина изображения занимает оставшуюся часть контейнера */
+    height: auto;                 /* Высота автоматически подстраивается */
+    object-fit: cover;            /* Обеспечивает заполнение контейнера */
+}
+
+.dark-orange-box {
+    display: flex;                /* Включаем Flexbox */
+    flex-direction: column;       /* Устанавливаем направление столбцом */
+    justify-content: center;       /* Центрируем по вертикали */
+    align-items: center;           /* Центрируем по горизонтали */
+    background-color: #FF7D01;
+    color: #FFFFFF;
+    padding: 30px;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    height: auto;                 /* Высота автоматически подстраивается под содержимое */
+}
+.dark-orange-box h1{
+    color:#FEFB6E;
+    font-style: italic;
+    margin-bottom: 40px;
+    font-weight: 300;
+    font-family: 'IvyPresto Headline';
+}
+.dark-orange-box img, .dark-orange-box p{
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.yellow-btn{
+background-color: #FEFB6E;
+color:#FF7D01;
+padding: 10px 15px;
+border-radius: 10px;
+width:100%;
+border: none;
+font-weight: 500;
+    font-family: 'Jost';
+}
+
+.image-gallery{
+    display: grid;
+    gap:10px;
+}
+  .section-title {
+    color: #494747;
+    text-align: center;
+    margin: 20px auto;
+    font-style: italic;
+    font-family: 'IvyPresto Headline';
+    width:50%;
+  }
+
+  .section-text {
+    color: #333;
+    text-align: center;
+    margin: 40px auto;
+    width:50%;
+  }
+
+  .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /*gap: 20px;*/
+    padding: 0 20px;
+  }
+
+  .image-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .btn-pink {
+    background-color: #FF5A9E;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 30px;
+  }
+
+  .auth-block {
+    background-color: #FF498A;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .auth-text {
+    margin-bottom: 20px;
+  }
+
+  .auth-btn {
+    background-color: #fff;
+    color: #FF498A;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .price-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .middle-third-box h2{
+color:#FF498A;
+font-weight: 300;
+font-family: 'IvyPresto Headline';
+font-style: italic;
+  }
+  .middle-third-box h1{
+    color:#FF498A;
+font-weight: 300;
+font-family: 'IvyPresto Headline';
+font-style: italic;
+  }
+  .price-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+
+  .price {
+    color: #FF89AA;
+  }
+
+  .orange-block {
+    background-color: #FF7D01;
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  .orange-title {
+    color: #FEFB6E;
+    margin-bottom: 20px;
+  }
+
+  .orange-btn {
+    background-color: #FEFB6E;
+    color: #FF7D01;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  
+.middle-third-box-button{
+    text-align: center;
+    background-color: #FF498A;
+    color:#FFFFFF;
+    border-radius: 8px;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px;
+}
+h2 {
+    margin-bottom: 20px;
+}
+.plan {
+    background-color: #FFE3EC;   /* Цвет фона для плана (при необходимости) */
+    padding: 15px;               /* Отступы внутри плана */
+    border-radius: 8px;          /* Скругление углов */
+    margin-bottom: 10px;         /* Отступ между планами */
+    width: 100%;                 /* Ширина плана на 100% */
+    overflow-wrap: break-word;
+    white-space: normal;
+    word-break: break-word;
+}
+.plan span{
+    overflow-wrap: break-word; 
+    white-space: normal; 
+}
+.plans {
+    width: 100%;                 /* Устанавливаем ширину на 100% */
+    display: flex;               /* Используем Flexbox для расположения планов (если нужно) */
+gap:   10px;
+ margin-top: 20px;           /* Отступ сверху (при необходимости) */
+ flex-wrap: wrap;
+}
+
+.registration-box {
+    display: flex;                /* Включаем Flexbox */
+    align-items: center;          /* Выравниваем по вертикали */
+    justify-content: flex-start;/* Распределяем пространство между элементами */
+    padding: 5px;               /* Добавляем отступы (при необходимости) */
+    background-color: #FF498A;   /* Цвет фона (при необходимости) */
+    border-radius: 8px;          /* Скругление углов */
+    margin-bottom: 10px;
+    color: #FFFFFF;
+    flex-wrap: nowrap;
+}
+
+.registration-box img {
+    margin-right: 10px;          /* Отступ справа от изображения */
+}
+
+.registration-box span {
+    flex-grow: 1;                /* Позволяет тексту занимать оставшееся пространство */
+    margin-right: 10px;          /* Отступ справа от текста */
+    font-family: 'Jost';
+    font-weight: 500;
+}
+
+.registration-box button {
+    margin-left: auto;           /* Прижимаем кнопку к правой стороне */
+}
+.registration-box button{
+    align-items: end;
+    background-color: #FFFFFF;
+    color:#FF498A;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px;
+}
+
+h3 {
+    display: flex;
+    justify-content: space-between; /* Распределение пространства между заголовком и ценой */
+    align-items: center; /* Центрирование по вертикали */
+    margin-bottom: 15px;
+}
+
+.cost {
+    color: #FF5A9E; /* Цвет текста для цены */
+}
+
+p {
+    margin: 5px 0; /* Отступы между параграфами */
+    text-align: left; /* Выровнять текст по левой стороне */
+}
+.light-pink-block{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+}
+.pink-text{
+color:#FF498A;
+}
+.pink_underscore u {
+    text-decoration: none; /* Убираем стандартное подчеркивание */
+    position: relative; /* Устанавливаем позиционирование для псевдоэлемента */
+}
+
+.pink_underscore u::after {
+    content: ""; /* Создаем пустой контент для псевдоэлемента */
+    position: absolute; /* Абсолютное позиционирование */
+    left: 0; /* Начинаем от левого края текста */
+    bottom: 0; /* Позиционируем снизу */
+    width: 100%; /* Ширина подчеркивания равна ширине текста */
+    height: 2px; /* Толщина подчеркивания */
+    background-color: #FF498A; /* Цвет подчеркивания */
+}
+.middle-second-box, .middle-first-box, .middle-third-box,.bottom-box{
+    display: flex;
+    gap:10px;
+}
+.light-pink-box{
+    background-color: #FFF2F6;
+    border:none;
+    border-radius: 8px;
+    text-align: center;
+}
+.light-pink-box p {
+    text-align: center;
+}
+.light-pink-box button{
+    background-color: #FF498A;
+    padding: 10px 15px;
+}
+.middle-third-box > img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.bottom-box img:nth-child(2){
+    width: 100%; /* Ширина 100% от родительского контейнера */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    max-height: 100%; /* Ограничение высоты */
+    object-fit: cover; /* Заполнение контейнера с сохранением пропорций */
+}
+.middle-third-box .light-pink-box{
+    padding: 30px;
+    border-radius: 25px;
+    border: none;
+    text-align: center;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #FFF2F6;
+        padding: 30px;
+        max-width: 600px;
+        margin: 0 auto;
+        height: auto;
+        gap: 20px;
+}
+.bottom-box{
+    border-radius: 25px;
+    border: none;
+    text-align: center;
+}
+.registration-block{
+    font-family: 'IvyPresto Headline';
+    font-weight: 300;
+    color: #FF498A; 
+}
+.plan span{
+    font-family: 'Jost';
+    text-align: left;
+}
+.plan{
+    border-radius: 15px;
+    padding: 10px;
+}
+.plan h3{
+    font-family: 'IvyPresto Headline';
+    font-weight: 300;
+}
+.about-us-content .plan-image-gallery img {
+    float: left; /* Устанавливаем обтекание слева */
+    margin-right: 5px; /* Отступ справа для текста */
+}
+
+.about-us-content .plan-image-gallery span {
+    display: inline-block; /* Убедимся, что текст отображается в строке */
+    vertical-align: middle; /* Выравнивание текста по вертикали */
+}
+.registration-block h2 {
+    text-align: center;
+    font-weight: 300;
+}
+.dark-pink-box h1{
+    font-weight: 300;
+    font-family: 'IvyPresto Headline';
+}
+@media (min-width: 1921px) {
+    .dark-orange-box h1{
+        font-size: 40px;
+    }
+    .first-box{
+        flex-direction: row;
+    }
+    .headline {
+        font-size: 45px;
+    }
+    .pink-box h1 {
+        font-size: 50px;
+    }
+    .section-text {
+        font-size: 20px;
+    }
+    .pink-box p {
+        font-size: 20px;
+    }
+    .section-title {
+        font-size: 50px;
+    }
+    .btn-pink {
+        font-size: 16px;
+    }
+    .auth-text {
+        font-size: 16px;
+    }
+    .auth-btn {
+        font-size: 14px;
+    }
+    .price-section h2 {
+        font-size: 40px;
+    }
+    .price-list {
+        font-size: 16px;
+    }
+    .orange-title {
+        font-size: 40px;
+    }
+    .orange-btn {
+        font-size: 14px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    .cost {
+        font-size: 20px; 
+    }
+    p {
+        font-size: 16px;
+    }
+    .registration-box-span-button{
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+@media (max-width: 1921px) and (min-width: 1024px){
+    .dark-orange-box h1{
+        font-size: 40px;
+    }
+    .plan {
+        background-color: #FFF2F6; /* Цвет фона */
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: left;
+    }
+    .plan span{
+        color:#fff;
+        font-weight: 300;
+        font-family: 'Jost';
+        font-weight: 500;
+    }
+    .plan h3{
+        color:#fff;
+    }
+    .pink-box-image{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .image-gallery{
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .middle-second-box, .middle-first-box,.middle-third-box, .bottom-box{
+        display: flex;
+        flex-direction: row;
+    }
+    .registration-block {
+        background-color: #FF89AA; /* Цвет фона блока */
+        padding: 20px;
+        color: #FFFFFF; /* Цвет текста */
+        border-radius: 10px;
+    }
+    
+    .plan span{
+color:#494747;
+    }
+    .plan h3, .plan .cost{
+        color:#FF89AA;
+    }
+    img[src$="\\img\\flower-2.png"] {
+        display: none; 
+    }
+    
+     img[src$="\\img\\flower-1.png"] {
+        display: block; 
+    }
+    .dark-orange-box{
+        width:50%;
+    }
+    .dark-pink-box {
+        width:45%;
+    }
+  }
+  @media (min-width: 1440px) and (max-width: 1920px) {
+    .dark-orange-box h1{
+        font-size: 35px;
+    }
+    .headline {
+        font-size: 30px;
+    }
+    .pink-box h1 {
+        font-size: 35px;
+    }
+    .section-text {
+        font-size: 20px;
+    }
+    .pink-box p {
+        font-size: 16px;
+    }
+    .section-title {
+        font-size: 50px;
+    }
+    .btn-pink {
+        font-size: 16px;
+    }
+    .auth-text {
+        font-size: 16px;
+    }
+    .auth-btn {
+        font-size: 14px;
+    }
+    .price-section h2 {
+        font-size: 40px;
+    }
+    .price-list {
+        font-size: 16px;
+    }
+    .orange-title {
+        font-size: 40px;
+    }
+    .orange-btn {
+        font-size: 14px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    .cost {
+        font-size: 20px; 
+    }
+    p {
+        font-size: 16px;
+    }
+}
+  @media (max-width: 1024px) {
+    .dark-orange-box h1{
+        font-size: 35px;
+    }
+    .dark-orange-box,.dark-pink-box {
+        width:100%;
+        border-radius: 15px;
+    }
+    .middle-first-box img {
+        width: 100%;                   /* Ширина изображения занимает оставшуюся часть контейнера */
+        height: auto;                 /* Высота автоматически подстраивается */
+        object-fit: cover;            /* Обеспечивает заполнение контейнера */
+    }
+     img[src$="\\img\\flower-2.png"] {
+        display: block; 
+    }
+    
+     img[src$="\\img\\flower-1.png"] {
+        display: none;
+    }
+    .pink-box-image{
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    /* Скрыть конкретное изображение в .image-gallery */
+.about-us-content .image-gallery img[src$="\\img\\long-5.png"] {
+    display: none;
+  }
+.middle-second-box .pink-box-image img[src$="\\img\\image-7.png"],
+.middle-second-box .pink-box-image img[src$="\\img\\image-4.png"] {
+    display: none;
+  }
+  /* Скрыть изображения в .pink-box-image */
+  .pink-box-image img[src$="\\img\\image-2.png"],
+  .pink-box-image img[src$="\\img\\image-16.png"] {
+    display: none;
+  }
+
+    .image-gallery{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .middle-second-box, .middle-first-box,.middle-third-box,.bottom-box{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .plan{
+background-color: #FFF2F6;
+color: #fff;
+    }
+    .plan .cost{
+        color: #fff;
+    }
+    .plans {
+        flex-direction: column;
+    }
+    
+    .boja-girl{
+        background-color: #FF89AA;
+        color: #FFFFFF;
+    }
+    .boja-babe{
+        background-color: #FF498A;
+        color: #FFFFFF;
+    }
+    .boja-queen{
+        background-color: #FF7D01;
+        color: #FFFFFF;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .headline {
+        font-size: 30px;
+    }
+    .pink-box h1 {
+        font-size: 35px;
+    }
+    .section-text {
+        font-size: 20px;
+    }
+    .pink-box p {
+        font-size: 16px;
+    }
+    .section-title {
+        font-size: 40px;
+    }
+    .btn-pink {
+        font-size: 16px;
+    }
+    .auth-text {
+        font-size: 16px;
+    }
+    .auth-btn {
+        font-size: 14px;
+    }
+    .price-section h2 {
+        font-size: 40px;
+    }
+    .price-list {
+        font-size: 16px;
+    }
+    .orange-title {
+        font-size: 40px;
+    }
+    .orange-btn {
+        font-size: 14px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    .cost {
+        font-size: 20px; 
+    }
+    p {
+        font-size: 16px;
+    }
+}
+@media (max-width: 1024px) {
+    .dark-orange-box h1{
+        font-size: 35px;
+    }
+    .headline {
+        font-size: 30px;
+    }
+    .pink-box h1 {
+        font-size: 35px;
+    }
+    .section-text {
+        font-size: 20px;
+    }
+    .pink-box p {
+        font-size: 16px;
+    }
+    .section-title {
+        font-size: 40px;
+    }
+    .btn-pink {
+        font-size: 16px;
+    }
+    .auth-text {
+        font-size: 16px;
+    }
+    .auth-btn {
+        font-size: 14px;
+    }
+    .price-section h2 {
+        font-size: 40px;
+    }
+    .price-list {
+        font-size: 16px;
+    }
+    .orange-title {
+        font-size: 40px;
+    }
+    .orange-btn {
+        font-size: 14px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    .cost {
+        font-size: 20px; 
+    }
+    p {
+        font-size: 16px;
+    }
+}
+@media(max-width:769px){
+    .plan span {
+        color: #FFFFFF;
+    }
+    .plan h3, .plan .cost {
+        color: #FFFFFF;
+    }
+    .dark-orange-box h1{
+        font-size: 25px;
+    }
+    .middle-second-box, .middle-first-box, .middle-third-box,.bottom-box{
+        flex-direction:  column-reverse;
+    }
+    .middle-third-box .light-pink-box{
+        max-width: none;
+    }
+    .registration-box-span-button{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .first-box {
+        display: flex;
+        flex-direction: column-reverse; /* Картинки будут под текстом */
+        gap: 20px;
+      }
+      .section-title{
+        width:100%;
+      }
+      .pink-box,
+.pink-box-image {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+    .headline {
+        font-size: 25px;
+    }
+    .pink-box h1 {
+        font-size: 30px;
+    }
+    .section-text {
+        font-size: 20px;
+    }
+    .pink-box p {
+        font-size: 16px;
+    }
+    .section-title {
+        font-size: 25px;
+    }
+    .btn-pink {
+        font-size: 16px;
+    }
+    .auth-text {
+        font-size: 16px;
+    }
+    .auth-btn {
+        font-size: 14px;
+    }
+    .price-section h2 {
+        font-size: 40px;
+    }
+    .price-list {
+        font-size: 16px;
+    }
+    .orange-title {
+        font-size: 40px;
+    }
+    .orange-btn {
+        font-size: 14px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    .cost {
+        font-size: 20px; 
+    }
+    p {
+        font-size: 16px;
+    }
+    .section-text {
+        width: 100%;
+    }
+}
+ 

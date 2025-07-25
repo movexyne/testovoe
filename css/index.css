@@ -1,0 +1,1226 @@
+@font-face {
+    font-family: 'IvyPresto Headline'; /* Название шрифта */
+    src: url('../fonts/IvyPrestoDisplay-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Jost';
+    src: url('../fonts/Jost-Medium.ttf') format('truetype');
+    font-weight: 500; /* Medium */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+.content {
+    padding: 0 1%; /* Отступы справа и слева */
+    box-sizing: border-box; /* Включаем отступы в общую ширину */
+}
+
+
+body {
+    font-family: 'Jost';
+    margin: 0;
+    font-weight: 500;
+    color: #494747;
+    background-color: #FAFAFA;
+    font-size: 16px;
+    overflow: auto; 
+    white-space: normal; 
+    box-sizing: border-box;
+    max-width: 100vw; /* Ограничение ширины */
+    overflow-x: hidden; /* Скрытие горизонтальной прокрутки */
+    overflow-wrap: break-word; /* Перенос длинных слов */
+}
+
+
+.top-line{
+    background-color: #FF89AA;
+    padding:10px;
+    text-align: center;
+    color:#f0f0f0;
+    margin:0;
+    font-size:14px;
+    
+}
+
+.burger {
+    cursor: pointer;
+    margin:1em;
+    font-size:16px;
+}
+
+.nav_img {
+    padding: 0;
+    min-width: 5vw; /* Устанавливаем ширину */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    margin: 1vh auto;
+    display: block;
+}
+
+.last_nav_img {
+    margin-right: 0.7em;
+    width: 2vw; /* Фиксированная ширина */
+    height: 2vh; /* Фиксированная высота */ object-fit: contain; /* Сохраняем пропорции */
+}
+.png_360 {
+    width:5vw;
+}
+.basket {
+    height: 100%; 
+    padding: 10px 25px; 
+    background-color: #FF89AA;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+    font-family: Jost;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex; /* Используем flex для центрирования текста */
+    align-items: center; /* Вертикальное центрирование текста */
+    justify-content: center; /* Горизонтальное центрирование текста */
+}
+
+.submenu {
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    
+    z-index: 1;
+}
+
+.burger:hover .submenu {
+    display: block; 
+}
+
+.submenu p {
+    cursor: pointer;
+}
+.menu-bag button{
+    padding: 10px 15px;
+    background-color: #FF89AA;
+    color:#FFFFFF;
+    border: none; /* Установите однотонный цвет для границы */
+    border-radius: 10px;
+    cursor: pointer; /* Изменение курсора при наведении */
+    transition: background-color 0.3s, color 0.3s; 
+}
+.submenu p:hover {
+    background-color: #f0f0f0; 
+}
+
+nav {
+    margin: 15px 0;
+    background-color: #FFF2F6;
+    border: 1px solid #FF89AA;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: min-content auto min-content min-content min-content min-content; /* Автоматическая ширина для первого элемента и равные части для остальных */
+    align-items: center; /* Центрирование элементов по вертикали */
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+.sky_img{
+    width:100%;
+}
+
+.colorful-text {
+    font-size: 50px; /* Размер текста */
+    font-family: 'Jost';
+    font-style: italic;
+
+}
+
+.gray_text{
+    font-size: 45px;
+}
+
+.text_in_the_middle_of_box{
+    text-align: center;
+}
+
+.community p{
+    text-align: center;
+    margin: 20px;
+}
+
+.top_bags{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top_bags text{
+   height: 10%;
+}
+
+.top_bags .button{
+    font-size: 14px;
+}
+
+.top_bags button{
+    padding: 10px 25px; 
+    background-color: #FF89AA;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+    font-family:Jost;
+    font-weight: 600;
+    font-size: 16px;
+    width: 100%;
+}
+
+.bag_pictures {
+    display: grid;
+    position: relative;
+    padding: 0 30px; /* Отступы для стрелок */
+    margin-bottom: 4vh;
+}
+
+.bags {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden; /* Hides elements outside the visible area */
+}
+
+.bags span {
+    flex: 0 0 23%; /* Fixed width for each item */
+    margin: 0 1vw; /* Margin between items */
+    box-sizing: border-box; /* Include padding in width */
+    position: relative; /* For absolute positioning of the img */
+}
+
+.bags img {
+    width: 100%; /* Makes the image take the full width of the box */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes bottom space caused by inline-block */
+}
+
+.bag-pictures {
+    position: relative; /* For arrow positioning */
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #FF89AA;
+    z-index: 2;
+    font-size: 50px;
+}
+
+.left-arrow {
+    left: 10px; /* Позиция для левой стрелки */
+}
+
+.right-arrow {
+    right: 10px; /* Позиция для правой стрелки */
+}
+
+.middle_part {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%; /* Full width of the window */
+    gap:1%;
+    margin-bottom: 4vh;
+}
+
+.sky_in_the_middle {
+    background-color: #FFFFFF; /* Optional: Set a background for visibility */
+    flex: 0 0 45%; /* Left box takes 40% of the width */
+    display: flex;
+    flex-direction: column;
+}
+
+.pink_block_in_the_middle {
+    background-color: #FBEBF1;
+    border: 2px solid #FF498A;
+    
+    flex: 0 0 43%; /* Right box takes 60% of the width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 0 5%;
+}
+
+.pink_block_in_the_middle img {
+    height: auto;
+    object-fit: contain;
+    width: 25vw;
+}
+
+.pink_block_in_the_middle button {
+    background-color: #FF7D01;
+    color: #FBEBF1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 1vh 3vw;
+    font-family: 'Jost';
+    font-weight: 600;
+    margin-top: 5%;
+}
+
+.sky_in_the_middle img {
+    width: 100%; /* Ensure the image fills the container */
+    height: auto;
+    justify-content: center;
+}
+
+.top_bags span{
+    margin-top: 2%;
+}
+
+.text {
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Располагаем текст вертикально */
+    align-items: center; /* Центрируем текст по горизонтали */
+    margin-bottom: 20px; /* Отступ снизу для кнопок */
+}
+.text p {
+    margin: 0; /* Убираем отступы у параграфа */
+}
+.button-container {
+    display: flex; /* Горизонтальное расположение кнопок */
+    justify-content: center; /* Центрируем кнопки */
+    margin-top: 10px; /* Отступ сверху для кнопок */
+}
+.button-container button {
+    margin: 0 5px; /* Горизонтальные отступы между кнопками */
+    padding: 20px 35px;
+}
+
+.catalog_zagolovok {
+    width: 20vw;
+    margin-bottom: 1vh;
+    margin-left: auto;
+    margin-right: auto; /* Центрируем изображение по горизонтали */
+    display: block; /* Убедитесь, что изображение блочное */
+}
+
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки для .catalog .cat */
+    margin-bottom: 2vh;
+}
+
+.catalog .cat {
+    display: flex; /* Используем flex для более гибкого управления */
+    flex-direction: column; /* Размещаем содержимое вертикально */
+    align-items: center; /* Центрируем по горизонтали */
+    margin: 5px;
+    overflow: hidden; /* Скрываем переполнение */
+}
+
+.catalog .cat img {
+    width: 100%; /* Устанавливаем ширину изображения на 100% */
+    object-fit: cover; /* Заполнение контейнера с сохранением пропорций */
+}
+
+.catalog button {
+    color: #FBEBF1;
+    border: none;
+    cursor: pointer;
+    padding: 2% 0;
+    font-weight: 600;
+    font-family: 'Jost';
+    margin-top: 1vh;
+    border-radius: 4px;
+    width: 100%;
+}
+.catalog span {
+    display: grid; /* Используем Grid для .catalog span */
+    grid-template-columns: 1fr; /* 1 колонка */
+    grid-template-rows: repeat(2, auto); /* 2 строки */
+    align-items: center;
+}
+.catalog-4 button{
+    background: #FF89AA;
+}
+.catalog-2 button{
+    background: #FF7D01;
+}
+.catalog-3 button{
+    background: #FF498A;
+}
+
+
+
+.img-box img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.img-box {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+
+
+.banner_img{
+    width:98%;
+    height: auto;
+    margin: 1%;
+}
+
+.community {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.colored-letter {
+    display: inline-block;
+    font-family: 'IvyPresto Headline'; /* Убедитесь, что шрифт доступен */
+    font-weight: 300;
+    font-size: 50px;
+    font-style: italic;
+}
+
+.boxes_on_the_bottom{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex: 1 1 19%;
+    gap:1%;
+    margin: 3vh 0;    
+}
+
+.box{
+    border-radius: 15px;
+    padding: 1% 3%;
+    color: #f0f0f0;
+    width: 32%;
+    padding: 1%;
+}
+
+
+.pink_box{
+background: #FF89AA;
+}
+
+.dark_pink_box{
+background: #FF498A;
+}
+
+.orange_box{
+    background: #FF7D01;
+}
+.pink_box button{
+    color: #FF89AA;
+    }
+    
+.dark_pink_box button{
+    color: #FF498A;
+}
+    
+.orange_box button{
+    color: #FF7D01;
+}
+.box button{
+    background:#f0f0f0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width:100%;
+    padding:2% 0;
+    margin-top: 10px;
+    
+    font-family:Jost;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.box i {
+    font-weight: 300;
+    font-family: 'IvyPresto Headline';
+} 
+
+.custom-index-checkbox {
+    display: flex; /* Используем flexbox для выравнивания */
+    align-items: center; /* Центрируем по вертикали */
+    margin-top: 10px; /* Отступ сверху */
+}
+
+.index-checkbox-input {
+    display: none; /* Скрываем стандартный чекбокс */
+}
+
+.index-checkbox-label {
+    position: relative;
+    padding-left: 25px; /* Отступ для чекбокса */
+    cursor: pointer;
+    font-size: 12px;
+    display: block; /* Заставляем метку занимать всю ширину */
+}
+
+.index-checkbox-label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border: 2px solid white;
+    background: #FF89AA;
+    border-radius: 3px;
+}
+
+.index-checkbox-input:checked + .index-checkbox-label::before {
+    background: #ffffff; /* Цвет фона при выборе */
+}
+
+.index-checkbox-input:checked + .index-checkbox-label::after {
+    content: '✔'; /* Знак галочки */
+    position: absolute;
+    left: 15px;
+    top: 17%;
+    transform: translateY(-50%);
+    color: white; /* Цвет галочки */
+    font-size: 12px; /* Размер галочки */
+}
+
+.email-label {
+    margin-top: 10%;
+    margin-bottom: auto; /* Отодвигает блок "Email" вниз */
+}
+
+footer{
+    background: #FBEBF1;
+    padding: 20px;
+    width: 98.7vw;
+    margin-bottom: 0%;
+}
+
+footer h1{
+    font-style: italic;
+    font-family: 'IvyPresto Headline';
+    font-size: 40px;
+    font-weight: 300;
+}
+
+footer ol {
+    list-style-type: none; /* Убираем маркеры */
+}
+
+
+footer ol li {
+    margin-bottom: 5px; /* Отступ между элементами списка */
+}
+
+.logo-section {
+    box-sizing: border-box;
+}
+.logo-section p {
+    white-space: normal; /* Позволяет тексту переноситься */
+}
+.catalog-section, .nav-section, .contacts-section {
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+footer img {
+    margin-top: 8%;
+    max-width: 100%; /* Адаптация изображения */
+}
+
+.logo-section, .catalog-section, .nav-section, .contacts-section {
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-around; /* Равномерное распределение пространства */
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+}
+
+.contacts-section p{
+    padding-left: 40px;    
+}
+
+a {
+    text-decoration: none; /* Убирает подчеркивание */
+    color: #494747; /* Изменяет цвет текста */
+}
+@media (max-width: 1920px) or (min-width: 1921px){
+    .box p {
+        font-size: 20px;
+    }
+    .box i{
+        font-size: 50px;
+    }
+    .reasons_block{
+        text-align: center;
+    }
+    .reasons_to_choose {
+        display: flex;
+        flex-wrap: wrap; /* разрешаем перенос, чтобы всё влезало */
+        justify-content: center;
+        gap: 10px; /* уменьшаем расстояние между карточками */
+        overflow-x: hidden; /* убираем горизонтальную прокрутку */
+    }
+
+    .reason-row {
+        display: contents; /* чтобы .reason работали как единые flex-элементы */
+    }
+
+    .reason {
+        flex: 0 0 180px; /* уменьшаем ширину, чтобы всё вместилось */
+        max-width: 180px;
+        min-width: 180px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }            
+}
+
+@media (min-width: 1200px) {
+    .reasons_to_choose {
+        justify-content: space-evenly; /* равномерное распределение */
+        gap: 30px; /* увеличиваем расстояние */
+        flex-wrap: wrap;
+    }
+
+    .reason {
+        flex: 1 1 clamp(200px, 20vw, 0px);
+        max-width: 300px;
+        min-width: 150px;
+    }
+
+    .reason p {
+        font-size: 1.05rem; /* чуть крупнее шрифт */
+    }
+
+    .img-box {
+        width: clamp(80px, 6vw, 100px); /* масштабируем картинку */
+        height: clamp(80px, 6vw, 100px);
+    }
+}
+@media (min-width: 766px) and (max-width: 960px) {
+    .reasons_to_choose {
+        display: flex;
+        flex-wrap: nowrap; /* Запрещаем перенос */
+        justify-content: center;
+        gap: 12px; /* Уменьшаем промежутки между карточками */
+        overflow-x: hidden; /* скрываем прокрутку */
+    }
+
+    .reason-row {
+        display: contents; /* упрощаем структуру */
+    }
+
+    .reason {
+        flex: 0 0 140px;
+        max-width: 140px;
+        min-width: 140px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-box img {
+        width: 90%;
+        height: auto;
+        object-fit: contain; /* Показываем изображение полностью, без обрезки */
+        max-height: 90%; /* Предотвращаем выход за пределы .img-box */
+    }
+    
+    .reason p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Media query for screens between 1440px and 1920px */
+@media (min-width: 1440px) and (max-width: 1920px) or (min-width: 1921px){
+    
+    .in_row{
+        display: grid; /* Располагаем списки в ряд */
+        grid-template-columns: auto max-content;
+        gap: 5vw;
+    }
+    .catalog-lists {
+        display: grid; /* Располагаем списки в ряд */
+        grid-template-columns: 1fr 1fr;
+        gap:20%;
+    }
+    .contacts-lists{
+        display: grid; /* Располагаем списки в ряд */
+        grid-template-columns: 1fr 1fr;
+        gap:20%;
+    }
+    .catalog_pictures button{
+        border-radius: 15px;
+    }
+    
+    .index-checkbox-label::before {
+        top: 15%;
+        width: 15px;
+        height: 15px;
+    }
+    .index-checkbox-input:checked + .index-checkbox-label::after 
+    {
+        left: 5px;
+    }
+    .index-checkbox-label {
+        font-size: 12px;
+        padding-left: 30px; /* Отступ для чекбокса */
+    }
+    .arrow{font-size:20px;}
+    .mini_text p{
+        font-size:12px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+    }
+    .pink_block_in_the_middle{
+        border-radius: 20px;
+    }
+    .colored-letter{
+        font-size: 50px;
+    }
+    .gray_text{
+        font-size: 45px;
+    }
+    
+
+    .mini_text{
+        font-size:10px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+    }
+    .reason p {
+        font-size: 20px;
+    }
+}
+
+/* Media query for screens between 1024px and 1440px */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .catalog-section{
+        margin-left:0;
+    }
+    .in_row{
+        display: grid; /* Располагаем списки в ряд */
+        grid-template-columns: auto max-content;
+        gap: 2vw;
+    }
+    .reason p {
+        font-size: 16x;
+    }
+    
+    .catalog_pictures button{
+        border-radius: 15px;
+    }
+    .pink_block_in_the_middle{
+        border-radius: 20px;
+    }
+    .colored-letter{
+        font-size: 40px;
+    }
+    .gray_text{
+        font-size: 35px;
+    }
+    .mini_text{
+        font-size:10px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+    }
+    .arrow{font-size:15px;}
+    .index-checkbox-label::before {
+        top: 15%;
+        width: 15px;
+        height: 15px;
+    }
+    .index-checkbox-input:checked + .index-checkbox-label::after 
+    {
+        left: 5px;
+    }
+    .index-checkbox-label {
+        font-size: 12px;
+        padding-left: 30px; /* Отступ для чекбокса */
+    }
+    .contacts-lists{
+        display: grid; /* Располагаем списки в ряд */
+        grid-template-columns: min-content min-content;
+        gap: 20%;
+    }
+    
+    
+}
+@media (max-width: 1024px){
+    .footer-content {
+        flex-direction: row; /* Вертикальное расположение */
+        align-items: flex-start; /* Выравнивание по левому краю */
+        flex-wrap: nowrap;
+    }
+    .logo-section p {
+        font-size: 14px;
+    }
+}
+
+/* Media query for screens smaller than 1024px */
+@media (max-width: 1024px) and (min-width:760px) {
+    .footer-content li a{
+        font-size: 14px;
+    }
+    .footer-content h1{
+        font-size: 24px;
+    }
+    .footer-content ol li {
+        margin-bottom: 1px;
+    }
+    .top-line{
+        white-space: nowrap;
+    }
+    .catalog-lists {
+        display: grid; /* Располагаем списки в ряд */
+        grid-template-columns: 1fr;
+        
+    }
+    .contacts-lists{
+        display: grid; /* Располагаем списки в ряд */
+        grid-template-columns: 1fr 1fr;
+        gap:20%;
+    }
+    .footer-content {
+        flex-direction: row; /* Вертикальное расположение */
+    }
+    
+    .in_row{
+        display: grid; /* Располагаем списки в ряд */
+        grid-template-columns: auto min-content;
+        gap: 3vw;
+    }
+    .arrow{font-size:15px;}
+    .reason p {
+        font-size: 14px;
+    }
+    .mini_text{
+        font-size:10px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+    }
+    .catalog_pictures button{
+        border-radius: 5px;
+    }
+    .catalog_pictures button{
+        border-radius: 5px;
+    }
+    .pink_block_in_the_middle{
+        border-radius: 15px;
+        font-size: 12px;
+    }
+    .colored-letter{
+        font-size: 30px;
+    }
+    .gray_text{
+        font-size: 25px;
+    }
+    .index-checkbox-label::before {
+        top: 15%;
+        width: 15px;
+        height: 15px;
+    }
+    .index-checkbox-input:checked + .index-checkbox-label::after 
+    {
+        left: 5px;
+        top: 17%;
+    }
+    .index-checkbox-label {
+        padding-left: 30px; /* Отступ для чекбокса */
+        font-size: 5px;
+    }
+
+    
+    
+    /* Стили для заголовков */
+    footer h1 {
+        font-size: 30px; /* Меньший размер шрифта для заголовков */
+    }
+
+    
+    .index-checkbox-label::before {
+        top: 15%;
+        width: 10px;
+        height: 10px;
+        border-radius: 3px;
+    }
+    .index-checkbox-input:checked + .index-checkbox-label::after 
+    {
+        font-size: 10px;
+        left: 3px;
+        top: 15%;
+    }
+    .index-checkbox-label {
+        padding-left: 30px; /* Отступ для чекбокса */
+        font-size: 12px;
+    }
+    .catalog_zagolovok {
+        width: 30vw;
+    }
+    
+}
+@media (min-width:761px){
+    .not_360_png{
+        display: block;
+    }
+    .png_360{
+        display: none;
+    }
+}
+@media (max-width:760px){
+    .burger{
+        margin: 0;
+    }
+    .basket{
+        display:none;
+    }
+    nav{
+        grid-template-columns:  min-content min-content auto min-content min-content min-content min-content; 
+    }
+    .not_360_png{
+        display: none;
+    }
+    .nav_img {
+        margin-right: 30%
+    }
+    .png_360{
+        display: block;
+    }
+    .box{
+        padding: 4%;
+    }
+    .box p {
+        font-size: 16px;
+    }
+    .box i{
+        font-size: 30px;
+    }
+    .catalog_zagolovok {
+        width: 35vw;
+    }
+    .footer-content {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .top-line {
+        font-size: 12px;
+        white-space: nowrap;
+    }
+    .catalog-lists {
+        display: grid; /* Располагаем списки в ряд */
+        grid-template-columns: 1fr 1fr;
+        gap:20%;
+    }
+    .contacts-lists{
+        display: grid; /* Располагаем списки в ряд */
+        grid-template-columns: 1fr ;
+        gap:0;
+    }
+    .footer-content {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .in_row{
+        display: grid; /* Располагаем списки в ряд */
+        grid-template-columns: 1fr;
+    }
+    .arrow {
+        font-size: 25px;
+    }
+    .gray_text{
+        font-size: 25px;
+        padding: 5px;
+    }
+    .colored-letter{
+        font-size: 30px;
+    }
+    .footer-content li a{
+        font-size: 14px;
+    }
+    .footer-content h1{
+        font-size: 24px;
+    }
+    .footer-content ol li {
+        margin-bottom: 1px;
+    }
+    .logo-section p{
+        font-size: 14px;
+    }
+    .logo-section img{
+        max-width: 120px;
+    }
+    
+    .catalog .cat img {
+        width: 100%;
+    height: auto;
+    display: block;
+    }
+    .catalog-wrapper {
+        overflow-x: auto;
+    }
+    
+    .catalog {
+        display: flex;
+        gap: 10px;
+        overflow:hidden;
+    }
+
+    .catalog span{
+        flex: 0 0 70%;
+    margin: 0 1vw;
+    box-sizing: border-box;
+    position: relative;
+    }
+    
+    .catalog button{
+        font-size: 12px;
+    }
+    .community_pictures {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+        width: 100%;
+        column-gap: 1%; /* Отступы между элементами */
+        margin-bottom: 10%;
+    }
+    
+    .community_img {
+        width: 100%; /* Ширина .community_img будет 100% от колонки */
+    }
+    
+    .community_pictures img {
+        width: 100%; /* Ширина изображения будет 100% от родителя */
+        height: auto; /* Высота изображения будет автоматически рассчитываться для сохранения пропорций */
+        object-fit: cover; /* Заполнение контейнера с сохранением пропорций */
+    }
+    .middle_part {
+        grid-template-columns: 1fr;
+    }
+    .community_pictures img[src$="img\\image-8.png"],
+    .sky_in_the_middle ,
+    .community_pictures img[src$="img\\image-4.png"] {
+        display: none; /* Скрываем эти изображения */
+    }
+    .pink_block_in_the_middle{
+        border: 1px solid #FF498A;
+        border-radius: 7px;
+        padding: 5%;
+    }
+    .pink_block_in_the_middle img{
+        width:70vw;
+    }
+    .pink_block_in_the_middle button a{
+        font-size: 12px;
+        color: #FFFFFF;
+        font-weight: 600;
+    }
+    .bags button {
+        font-size: 12px;       /* Размер шрифта */
+        white-space: nowrap;    /* Запрет на перенос слов */
+        overflow: hidden;       /* Скрывает переполненный текст */
+        text-overflow: ellipsis; /* Добавляет многоточие, если текст длинный */
+    }
+    .reasons_to_choose {
+        display: block;
+    }
+    
+    .img-box {
+        width: 20%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+    .reason {
+        min-width: 100px; /* Минимальная ширина, чтобы не сжимался до нуля */
+        width: 100%;
+        max-width: 120px;
+        box-sizing: border-box;
+    }
+    
+    .reason p {
+        font-size: 10px;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: auto;
+        word-break: break-word;         /* переносим длинные слова */
+        overflow-wrap: break-word;      /* перенос при необходимости */
+        hyphens: auto;                  /* перенос по слогам (если браузер поддерживает) */
+    }
+    
+    
+    .reason-row {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: nowrap; /* все элементы в одну строку */
+        margin-bottom: 2vh;
+    }
+}
+@media (max-width:360px){
+    .png_360 {
+        width: 10vw;
+    }
+    .index-checkbox-label::before{
+        top: 20%;
+    }
+    .reasons_to_choose {
+        display: block;
+    }
+
+    .reason-row {
+        display: flex;
+        justify-content: center;
+        gap: 10px; /* уменьшаем отступы для узкого экрана */
+        flex-wrap: wrap;
+        margin-bottom: 2vh;
+    }
+
+    .reason {
+        flex: 0 0 100%; /* каждая карточка занимает всю ширину */
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        word-break: break-word;
+        overflow-wrap: break-word; /* разрываем длинные слова */
+        padding: 10px 5px;
+        box-sizing: border-box;
+    }
+
+    .reason p {
+        font-size: 10px;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 0;
+        line-height: 1.2;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto; /* автоматические переносы по слогам */
+    }
+
+    .img-box {
+        width: 20%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+
+    .img-box img {
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* изображение помещается и не обрезается */
+    }
+
+    .catalog-lists {
+        display: grid; /* Располагаем списки в ряд */
+        grid-template-columns: 1fr ;
+        gap:0%;
+    }
+    .contacts-lists{
+        display: grid; /* Располагаем списки в ряд */
+        grid-template-columns: 1fr ;
+        gap:0;
+    }
+    .footer-content {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .in_row{
+        display: grid; /* Располагаем списки в ряд */
+        grid-template-columns: 1fr;
+    }
+    .arrow {
+        font-size: 20px;
+    }
+    .button-container .button {
+        font-size: 10px;
+        padding: 10px 5px;
+    }
+    .nav_img{
+        max-width:56px;
+    }
+    .top-line{
+        white-space: normal;
+    }
+    .logo-section p {
+        font-size: 12px;
+    }
+    .footer-content h1 { 
+        font-size: 24px;
+    }
+    .mini_text{
+        font-size:10px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+    }
+    
+.contacts-section p{
+    padding-left: 00px;  
+    padding-top: 10px;   
+}
+.bags p{
+    font-size: 14px;
+}
+.bags button {
+    font-size: 12px;       /* Размер шрифта */
+    white-space: nowrap;    /* Запрет на перенос слов */
+    overflow: hidden;       /* Скрывает переполненный текст */
+    text-overflow: ellipsis; /* Добавляет многоточие, если текст длинный */
+}
+}
+
+@media (min-width: 760px) and (max-width: 1920px){
+    
+.contacts-section p{
+    padding-left: 40px;    
+}
+.community_pictures {
+    display: flex;
+    flex-wrap: wrap;  /* Позволяет переносить изображения на новую строку */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    column-gap:1%;
+}   
+.community_img {
+    flex: 1 1 19%; /* Устанавливаем базовую ширину в 20% для 5 изображений в ряду */
+    max-width: 19%; /* Максимальная ширина также в 20% */
+}
+
+.community_pictures img {
+    width: 100%; /* Ширина изображения будет 100% от родителя */
+    height: auto; /* Высота изображения будет автоматически рассчитываться для сохранения пропорций */
+    object-fit: cover; /* Заполнение контейнера с сохранением пропорций */
+}
+}
+

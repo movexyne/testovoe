@@ -1,0 +1,138 @@
+.error-container {
+    text-align: center;
+    width: 100%;
+    background-color: #FF7D01;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.vector-image {
+    width: 100px; /* Adjust as needed */
+    margin-bottom: 20px;
+}
+
+.error-container h1 {
+    margin: 10px 0;
+    color:#FEFB6E;
+    font-style: italic;
+}
+
+.error-container p {
+    margin-bottom: 20px;
+    color:#FFFFFF;
+}
+
+.error-container .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.error-container .button:nth-of-type(1){
+    background-color: #FBEBF1;
+    color: #FF498A;
+}
+
+.error-container .button:nth-of-type(2){
+    background-color: #FEFB6E;
+    color: #FF7D01;
+}
+
+.error-container .button {
+    padding: 15px 30px; /* Увеличиваем отступы */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    display: flex; /* Используем flexbox */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    text-align: center; /* Центрируем текст */
+    white-space: nowrap; /* Предотвращаем перенос текста */
+}
+
+.error-container .button.secondary {
+    background-color: #FEFB6E;
+    color: #000;
+}
+
+.error-container .button {
+    background-color: #FF7D01; /* Darker shade for hover effect */
+}
+
+.error-container .button.secondary {
+    background-color: #FEFB6E; 
+    color:#FF7D01;
+}
+
+
+@media (min-width: 1921px) {
+    .error-container img{
+        max-width: 56px;
+    }
+    .error-container p {
+        font-size: 20px;
+    }
+    .error-container h1 {
+        font-size: 40px;
+    }
+    .error-container {
+        padding: 20% 20px;
+    }
+    .error-container .button{
+        min-width: 150px; 
+    }
+}
+@media (min-width: 360px) and (max-width: 1920px){
+    .error-container .button{
+        min-width: 150px; 
+    }
+}
+@media (min-width: 1440px) and (max-width: 1920px) {
+    .error-container img{
+        max-width: 56px;
+    }
+    .error-container p {
+        font-size: 20px;
+    }
+    .error-container h1 {
+        font-size: 40px;
+    }
+    .error-container {
+        padding: 10% 20px;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+    img{
+        max-width: 56px;
+    }
+    p {
+        font-size: 20px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    .container {
+        padding: 10% 20px;
+    }
+}
+@media (max-width: 1024px) {
+    .error-container img{
+        max-width: 40px;
+    }
+    .error-container p {
+        font-size: 16px;
+    }
+    .error-container h1 {
+        font-size: 25px;
+    }
+    .error-container {
+        padding: 15% 20px;
+    }
+}
+@media (max-width: 360px){
+    .error-container .button{
+        min-width: 80px; 
+        font-size: 14px;
+    }
+}
