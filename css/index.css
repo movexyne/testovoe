@@ -487,14 +487,14 @@ background: #FF498A;
 }
 
 .index-checkbox-input:checked + .index-checkbox-label::before {
-    background: #ffffff; /* Цвет фона при выборе */
+    background: #FF89AA; /* Цвет фона при выборе */
 }
 
 .index-checkbox-input:checked + .index-checkbox-label::after {
     content: '✔'; /* Знак галочки */
     position: absolute;
-    left: 15px;
-    top: 17%;
+    left: 4px;
+    top: 20%;
     transform: translateY(-50%);
     color: white; /* Цвет галочки */
     font-size: 12px; /* Размер галочки */
@@ -562,6 +562,9 @@ footer img {
 a {
     text-decoration: none; /* Убирает подчеркивание */
     color: #494747; /* Изменяет цвет текста */
+}
+.footer-content h1{
+    color: #494747;
 }
 @media (max-width: 1920px) or (min-width: 1921px){
     .box p {

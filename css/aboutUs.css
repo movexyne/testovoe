@@ -10,21 +10,6 @@
     font-weight: 500; /* Medium */
 }
 
-body {
-    font-family: 'Jost';
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr; /* 1 колонка */
-    grid-auto-rows: auto; /* Автоматическая высота строк */
-    font-weight: 500;
-    color: #494747;
-    font-size: 16px;
-    overflow: auto; 
-    white-space: normal; 
-    box-sizing: border-box;
-    overflow-x: hidden; /* Скрытие горизонтальной прокрутки */
-    overflow-wrap: break-word; /* Перенос длинных слов */
-}
 
 .hero {
     height: auto;
@@ -41,7 +26,8 @@ body {
     margin-top: 30px;
   }
 .top-text{
-    width:100%;
+    width:90%;
+    margin: 0 auto;
     text-align: center;
 }
  .about-us-content {
@@ -66,7 +52,7 @@ body {
     justify-content: center;      
     align-items: center;          
     background-color: #FFF2F6;
-    padding: 30px;
+    padding: 20px;
     border-radius: 8px;
     border: 2px solid #FF498A;   
     text-align: center;
@@ -187,8 +173,7 @@ font-weight: 500;
   .image-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    /*gap: 20px;*/
-    padding: 0 20px;
+    
   }
 
   .image-gallery img {
@@ -847,8 +832,6 @@ color: #fff;
   max-width: 800px;
   margin: 0 auto;
 }
-
-
     .headline {
         font-size: 25px;
     }
@@ -898,7 +881,8 @@ color: #fff;
         font-size: 16px;
     }
     .section-text {
-        width: 100%;
+        width: 90%;
+        margin: 0 auto 15px auto;
     }
 }
  

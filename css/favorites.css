@@ -61,14 +61,15 @@
     color: #494747; /* Цвет текста */
 }
 .submenu {
+    overflow-y: auto;
     display: none; 
     position: fixed;
     top: 0; 
     left: 0; 
     background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    width: 320px; 
+    z-index: 100;
+    width: 90%; 
     border-radius: 5px; 
     height: 100%; 
     padding: 10px 0; 
@@ -306,11 +307,12 @@ a {
 }
 .favorites-slider,
 .basket-slider {
+    overflow-y: auto; /* Добавляем вертикальную прокрутку */
     position: fixed;
     right: -100%; /* Скрываем слайдер за пределами экрана */
     top: 0;
-    height: 100%;
-    width: 600px; /* Задаем ширину слайдера */
+    height: 100%; /* Полная высота окна */
+    width: 600px; /* Ширина слайдера */
     background-color: #FFF2F6;
     border: none; 
     transition: right 0.3s ease; 
@@ -513,18 +515,14 @@ a {
     justify-content: space-between;
     font-size: 14px;
 }
-.basket-bottom{
-    position: absolute; /* Позволяет позиционировать элемент относительно родителя */
-    bottom: 0; /* Приклеиваем к низу */
-    left: 0; /* Приклеиваем к левому краю */
-    width: 100%; /* Ширина на весь родительский блок */
-    background-color: #FFFBF1; /* Цвет фона (по желанию) */
+.basket-bottom {
+    /* Убираем абсолютное позиционирование */
     padding: 10px; /* Отступы (по желанию) */
     text-align: center; /* Выравнивание текста по центру */
-    margin: 0;
     color: #FFFFFF;
-    background-color: #FF7D01;
+    background-color: #FF7D01; /* Цвет фона */
     font-weight: 500;
+    margin-top: auto; /* Позволяет элементу занимать место и быть внизу */
 }
 .basket-content{
     padding: 20px;
@@ -573,23 +571,18 @@ a {
     color: #FF89AA; /* Розовый цвет плюса */
 }
 .basket-content button{
-    position: absolute;
-    bottom: 5%; /* Приклеиваем к низу */
+    margin-top: auto;
     border:none;
     border-radius: 5px;
     background-color: #FF89AA;
     color: #FFFFFF;
-    margin-top: 10px;
-    width: calc(100% - 40px);
     padding: 10px;
 }
 .result-text {
-    position: absolute;
-    bottom: 10%;
+    margin-top: auto;
     display: flex;
     justify-content: space-between; /* Размещает элементы по краям */
     align-items: center; /* Центрирует по вертикали */
-    width: calc(100% - 40px); /* Уменьшаем ширину для учета отступа справа */
     margin: 0;
 }
 
@@ -748,6 +741,17 @@ a {
         font-size: 16px; 
     }
 }
+@media(max-width: 1920px){
+    .basket-slider {
+        overflow-y: auto; /* Добавляем вертикальную прокрутку */
+    }
+    
+    .basket-content {
+        display: flex;
+        flex-direction: column; /* Убедитесь, что содержимое располагается вертикально */
+    }
+    
+}
 
 @media (min-width: 1440px) and (max-width: 1920px) {
     .basket-slider h2 {
@@ -817,7 +821,7 @@ a {
 
 @media (max-width: 1024px) {
     .submenu a, .submenu span{
-        font-size: 18px;
+        font-size: 16px;
     }
     .account-info span{
         font-size: 14px;
@@ -867,15 +871,6 @@ a {
     .basket-bottom{
         font-size: 14px;
     }
-    .basket-product-info {
-        display: flex;
-        flex-direction: column; /* Устанавливаем направление колонок */
-    }
-    
-    .basket-product-info {
-        display: flex;
-        flex-direction: column; /* Устанавливаем направление колонок */
-    }
     
     .in-row-container {
         grid-column: span 2;
@@ -883,7 +878,6 @@ a {
 
     .in-row {
         display: flex;
-        align-items: center; /* Выравнивание по вертикали */
         justify-content: space-between; /* Разделение элементов по краям */
         gap: 10px; /* Промежуток между элементами */
     }
@@ -951,7 +945,7 @@ a {
 }
 /* basket */
 .submenu a, .submenu span{
-    font-size: 18px;
+    font-size: 14px;
 }
 .account-info span{
     font-size: 14px;
@@ -1005,6 +999,13 @@ a {
 }
 
 @media(max-width:760px){
+    .basket-product-info div{
+        grid-column: 1;
+    }
+    .basket-product-info {
+        display: grid;
+        grid-template-columns:  1fr;
+    }
     .burger-icon{
         height: 2px;
     }
@@ -1015,7 +1016,7 @@ a {
     }
     .box{width:100%;}
     .submenu a, .submenu span{
-        font-size: 18px;
+        font-size: 12px;
         font-weight: 500;
         font-family: 'Jost';
     }
@@ -1039,7 +1040,7 @@ a {
         font-size: 25px;
     }
     .favorites-slider ,.basket-slider{
-        width:100%;
+        width:90%;
     }
     .product-info p{
         font-size: 16px;
@@ -1049,5 +1050,10 @@ a {
     }
     .basket-bottom{
         font-size: 14px;
+    }
+}
+@media(max-width:360px){
+    .in-row {
+        flex-direction: column;
     }
 }
