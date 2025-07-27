@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="..\css\index.css">
     <link rel="stylesheet" href="..\css\favorites.css">
     <link rel="stylesheet" href="..\css\aboutUs.css">
+    <link rel="stylesheet" href="../css/search.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -128,19 +129,65 @@
         
         <div class="side-panel" id="side-panel">
             </div>
+            <img src="..\img\поиск.png" alt="Поиск" class="last_nav_img png_360" id="search-1">
 
-            <img src="..\img\поиск.png" alt="Поиск" class="last_nav_img png_360">
+            <img src="..\img\лого.png" alt="Logo" class="nav_img"onclick="goToHome()">
 
-            <img src="..\img\лого.png" alt="Logo" class="nav_img">
-
-            
-            <img src="..\img\heart 360.png" alt="Избранное" class="png_360">
-            <img src="..\img\basket 360.png" id="basket" alt="Корзина" class="png_360">
-            <img src="..\img\профиль.png" alt="Профиль" class="last_nav_img not_360_png">
-            <img src="..\img\поиск.png" alt="Поиск" class="last_nav_img not_360_png" id="search">
-            <img src="..\img\избранное.png" alt="Избранное" class="last_nav_img not_360_png" id="favorites">
-        <button class="basket" id="basket">корзина(0)</button>
+            <img src="..\img\heart 360.png" alt="Избранное" class="favorites-icon png_360">
+            <img src="..\img\basket 360.png" alt="Корзина" class="png_360 basket-button" id="basket">
+            <img src="..\img\профиль.png" alt="Профиль" class="last_nav_img not_360_png" onclick="goToPersonalAccount()">
+            <img src="..\img\поиск.png" alt="Поиск" class="last_nav_img not_360_png"  id="search-2">
+            <img src="..\img\избранное.png" alt="Избранное" class="favorites-icon last_nav_img not_360_png">
+            <button class="basket basket-button" id="basket">корзина(0)</button>
     </nav>
+    <div class="top-slider-search" id="topSliderSearch">
+        <div class="slider-content">
+            <span id="header">
+                <h2>Поиск по сайту</h2>
+            <span  id="closeButton" style="color:#FF89AA;">X</span>
+            </span>
+            <hr  style="color:#E0E0E0; margin: 10px 0; width: 100%;">
+            <div class="search-container">
+                <div class="input-container">
+                    <img src="..\img\поиск.png" alt="Поиск" class="search-icon">
+                    <input type="text" placeholder="Введите ваш запрос..." class="search-input">
+                </div>
+                <button class="search-button">найти</button>
+            </div>
+        </div>
+        <div class="main-slider-content">
+            <div class="side-bar">
+                <h2>Популярное</h2>
+                <a href="#">Новинки</a>
+                <a href="#">Косметички</a>
+                <a href="#">Чехлы</a>
+                <a href="#">Сумки</a>
+                <a href="#">Для дома</a>
+            </div>
+            <div class="top-slider-products">
+                <div class="top-slider-product">
+                    <img src="..\img\Rectangle 86-2.png" alt="Косметика">
+                    <p>Косметичка махровая Yellow Sky (M)</p>
+                    <p>2200 Р</p>
+                </div>
+                <div class="top-slider-product">
+                    <img src="..\img\Rectangle 86-2.png" alt="Косметика">
+                    <p>Косметичка махровая Yellow Sky (M)</p>
+                    <p>2200 Р</p>
+                </div>
+                <div class="top-slider-product">
+                    <img src="..\img\Rectangle 86-2.png" alt="Косметика">
+                    <p>Косметичка махровая Yellow Sky (M)</p>
+                    <p>2200 Р</p>
+                </div>
+                <div class="top-slider-product">
+                    <img src="..\img\Rectangle 86-2.png" alt="Косметика">
+                    <p>Косметичка махровая Yellow Sky (M)</p>
+                    <p>2200 Р</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="favorites-slider" id="favorites-slider">
         <h2>Избранное</h2>
         <div class="product">

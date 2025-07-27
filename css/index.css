@@ -479,7 +479,7 @@ background: #FF498A;
     left: 0;
     top: 30%;
     transform: translateY(-50%);
-    width: 12px;
+    width: 12px; 
     height: 12px;
     border: 2px solid white;
     background: #FF89AA;
@@ -655,13 +655,14 @@ a {
 }
 
 /* Media query for screens between 1440px and 1920px */
-@media (min-width: 1440px) and (max-width: 1920px) or (min-width: 1921px){
+@media ((min-width: 1440px) and (max-width: 1920px)) or (min-width: 1921px){
     
     .in_row{
         display: grid; /* Располагаем списки в ряд */
         grid-template-columns: auto max-content;
         gap: 5vw;
     }
+    
     .catalog-lists {
         display: grid; /* Располагаем списки в ряд */
         grid-template-columns: 1fr 1fr;

@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bojaworld</title>
     <link rel="stylesheet" href="../css/search.css">
+    <link rel="stylesheet" href="..\css\index.css">
+    <link rel="stylesheet" href="..\css\favorites.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+<script src="..\js\script.js" defer></script>
 
 </head>
 <body>
@@ -47,32 +49,29 @@
                     </span>
                     <span>+500 boja coins на первый заказ</span>
                     <span class="burger-pink-block"><img src="..\img\Rectangle 129.png">выбирай подарки в корзине</span>
-                </div>
+                </div> 
             </div>
-        </div>
-        
-        <div class="side-panel" id="side-panel">
-            <!-- Здесь будет контент, который открывается слева -->
-            <h2>Выберите пункт меню</h2>
-            <p>Выберите элемент из подменю, чтобы увидеть детали здесь.</p>
-        </div>
-        <img src="..\img\поиск.png" alt="Поиск" class="last_nav_img png_360">
+        </div> 
+            <img src="..\img\поиск.png" alt="Поиск" class="last_nav_img png_360" class="search-icon" id="search-1">
 
-        <img src="..\img\лого.png" alt="Logo" class="nav_img">
+            <img src="..\img\лого.png" alt="Logo" class="nav_img" onclick="goToHome()">
 
-        
-        <img src="..\img\heart 360.png" alt="Избранное" class="png_360">
-        <img src="..\img\basket 360.png" id="basket" alt="Корзина" class="png_360">
-        <img src="..\img\профиль.png" alt="Профиль" class="last_nav_img not_360_png">
-        <img src="..\img\поиск.png" alt="Поиск" class="last_nav_img not_360_png" id="search">
-        <img src="..\img\избранное.png" alt="Избранное" class="last_nav_img not_360_png" id="favorites">
+            <img src="..\img\heart 360.png" alt="Избранное" class="png_360" id="favorites">
+            <img src="..\img\basket 360.png" id="basket" alt="Корзина" class="png_360">
+            <img src="..\img\профиль.png" alt="Профиль" class="last_nav_img not_360_png" onclick="goToPersonalAccount()">
+            <img src="..\img\поиск.png" alt="Поиск" class="last_nav_img not_360_png" class="search-icon" id="search-2">
+            <img src="..\img\избранное.png" alt="Избранное" class="last_nav_img not_360_png" id="favorites">
     
         <button class="basket">корзина(0)</button>
     </nav>
 
-    <div class="top-slider" id="topSlider">
+    <div class="top-slider-search" id="topSliderSearch">
         <div class="slider-content">
-            <h2>Поиск по сайту</h2>
+            <span id="header">
+                <h2>Поиск по сайту</h2>
+            <span  id="closeButton" style="color:#FF89AA;">X</span>
+            </span>
+            <hr  style="color:#E0E0E0; margin: 10px 0; width: 100%;">
             <div class="search-container">
                 <div class="input-container">
                     <img src="..\img\поиск.png" alt="Поиск" class="search-icon">
@@ -80,7 +79,6 @@
                 </div>
                 <button class="search-button">найти</button>
             </div>
-            
         </div>
         <div class="main-slider-content">
             <div class="side-bar">
@@ -177,59 +175,8 @@
         </div>
     </footer>
     <script>
-        const colors = ['#FF89AA', '#FF7D01', '#FF498A', '#FF89AA', '#FF7D01', '#FF498A', '#FF89AA'];
     
-        // Получаем все элементы <span class="colored-letter"> на странице
-        const italicElements = document.querySelectorAll('span.colored-letter');
-    
-        italicElements.forEach(element => {
-            const word = element.textContent; // Получаем текст внутри <span>
-            element.innerHTML = ''; // Очищаем содержимое элемента
-    
-            // Создаем разноцветные буквы
-            for (let i = 0; i < word.length; i++) {
-                const span = document.createElement('span');
-                span.textContent = word[i]; // Каждая буква
-                span.style.color = colors[i % colors.length]; // Устанавливаем цвет
-                element.appendChild(span); // Добавляем букву в <span>
-            }
-        });
-          // Меню
-          document.querySelectorAll('.submenu-item').forEach(item => {
-            item.addEventListener("click", function(event) {
-                event.preventDefault();
-                
-                const sidePanel = document.getElementById("side-panel");
-                
-                // Изменяем содержимое боковой панели в зависимости от выбранного пункта
-                sidePanel.innerHTML = "<h2>" + this.textContent + "</h2><p>Информация о " + this.textContent + ".</p>";
-                
-                // Показываем боковую панель
-                sidePanel.style.display = "block"; // Показываем боковую панель
-                sidePanel.style.left = "0"; // Сдвигаем в видимую область
-            });
-        });
 
-        // Закрытие боковой панели при клике вне ее
-        document.addEventListener("click", function(event) {
-            const sidePanel = document.getElementById("side-panel");
-            if (!sidePanel.contains(event.target) && !document.querySelector('.burger').contains(event.target)) {
-                sidePanel.style.left = "-300px"; // Скрываем боковую панель
-            }
-        });
-        //открытие поиска
-        document.getElementById('search').addEventListener('click', function() {
-            const slider = document.getElementById('topSlider');
-            slider.classList.toggle('active'); 
-        });
-
-        /* Закрытие слайдера при клике вне его */
-        document.addEventListener("click", function(event) {
-            const slider = document.getElementById('topSlider');
-            if (!slider.contains(event.target) && !document.getElementById('search').contains(event.target)) {
-                slider.classList.remove('active');
-            }
-        });
     </script>
     </body>
 </html>
