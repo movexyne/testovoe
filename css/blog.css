@@ -243,27 +243,11 @@ header h1 {
     p{
         font-size: 14px;
     }
-    
-    .basket-slider h2 {
-        font-size: 14px; 
-        margin: 0;
-    }
-    .image img {
-        max-width: 80px;
-    }
-    .favorites-slider  h2{
-        font-size: 25px;
-    }
-    .favorites-slider ,.basket-slider{
-        width:100%;
-    }
+   
     .product-info p{
         font-size: 16px;
     }
     .product-info h3,.bottom-text p,.remove{
-        font-size: 14px;
-    }
-    .basket-bottom{
         font-size: 14px;
     }
     header button {
