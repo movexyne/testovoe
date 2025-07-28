@@ -337,20 +337,20 @@
             
             <div class="basket-bottom">подарки от boja и друзей бренда в каждом заказе!</div>
         </div>
-    <header>
-        <h1>блог</h1>
-        <button>все статьи</button>
-        <button>новости</button>
-        <button>карьера</button>
-        <button>коллаборации</button>
-        <button>faq</button>
-    </header>
+        <header>
+            <h1>блог</h1>
+            <button data-index="0">все статьи</button>
+            <button data-index="1">новости</button>
+            <button data-index="2">карьера</button>
+            <button data-index="3">коллаборации</button>
+            <button data-index="4">faq</button>
+        </header>
     <main class="container">
         <section class="hero">
-            <img src="..\img\blog-1.png" alt="Hero Image" class="hero-image">
+            <img src="..\img\blog-hero.png" alt="Hero Image" class="hero-image">
             <span class="hero-text"><h2>Коллаборация с брендом Studio29</h2>
             <p>Совместно с брендом Studio29 мы создали лимитированную коллекцию косметичек, резинки и чехла для ноутбука в нежном голубом оттенке.</p>
-            <a href="#">читать подробнее</a></span>
+            <a href="..\html\blog-2.html"><u style="color:#FF89AA;">читать подробнее</u></a></span>
         </section>
         <section class="posts">
             <article class="post">
@@ -438,6 +438,40 @@
             </div>
         </div>
     </footer>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const headerButtons = document.querySelectorAll("header button");
+    const heroSection = document.querySelector(".hero");
 
+    headerButtons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+            // Обновление цветов кнопок
+            headerButtons.forEach(btn => {
+                btn.style.backgroundColor = "#FBEBF1";
+                btn.style.color = "#FF89AA";
+            });
+
+            button.style.backgroundColor = "#FF89AA";
+            button.style.color = "#FFFFFF";
+
+            // Управление блоком .hero
+            if (index === 0) {
+                heroSection.style.display = "flex";
+            } else {
+                heroSection.style.display = "none";
+            }
+        });
+    });
+
+    // Показываем блок при загрузке и активируем первую кнопку
+    if (heroSection) heroSection.style.display = "flex";
+    const firstButton = headerButtons[0];
+    if (firstButton) {
+        firstButton.style.backgroundColor = "#FF89AA";
+        firstButton.style.color = "#FFFFFF";
+    }
+});
+
+</script>
 </body>
 </html>

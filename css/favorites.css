@@ -235,10 +235,6 @@ footer ol li {
     text-align: left; /* Выравнивание текста по левому краю */
 }
 
-
-
-
-
 a {
     text-decoration: none; /* Убирает подчеркивание */
     color: #494747; /* Изменяет цвет текста */
@@ -313,7 +309,7 @@ a {
     right: -100%; /* Скрываем слайдер за пределами экрана */
     top: 0;
     height: 100%; /* Полная высота окна */
-    width: 600px; /* Ширина слайдера */
+    width: 90%; /* Ширина слайдера */
     background-color: #FFF2F6;
     border: none; 
     transition: right 0.3s ease; 

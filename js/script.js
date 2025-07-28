@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const slider = document.getElementById('basket-slider');
             if (slider) {
                 slider.classList.toggle('active');
-            }
+            } 
         });
     });
 
@@ -183,24 +183,73 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Переходы
     document.querySelector(".auth-button").addEventListener('click', function () {
-        // Логика аутентификации
+        button.addEventListener('click', function () {
+            // Сбрасываем стили для всех кнопок
+            document.querySelectorAll('.auth-button').forEach(btn => {
+                btn.classList.remove('active'); // Убираем активный класс
+            });
+    
+            // Устанавливаем активный стиль для нажатой кнопки
+            this.classList.add('active'); // Добавляем активный класс
+        });
     });
 
-    // Функция для отображения блоков
-    function showBlock(blockId) {
-        const allBlocks = document.querySelectorAll('.content1');
-        allBlocks.forEach(block => {
-            block.style.display = 'none';
-        });
+// Показываем оба блока по умолчанию
+showBlock1('delivery-payment', 'requisites');
+    // Показываем нужный блок
+    showBlock1('delivery-payment');
+
+    // Красим первую кнопку вручную
+    const allButtons = document.querySelectorAll('.delivery-btn');
+    allButtons.forEach(btn => {
+        btn.classList.remove('active');
+        btn.style.backgroundColor = '#FBEBF1';
+    });
+
+    const firstButton = document.querySelector('.delivery-btn');
+    if (firstButton) {
+        firstButton.classList.add('active');
+        firstButton.style.backgroundColor = '#FF89AA';
+    }
+
+
+});
+
+// кнопки для страницы доставки
+
+function showBlock1(...blockIds) {
+    const allBlocks = document.querySelectorAll('.content1');
+    allBlocks.forEach(block => {
+        block.style.display = 'none';
+    });
+
+    blockIds.forEach(blockId => {
         const targetBlock = document.getElementById(blockId);
         if (targetBlock) {
             targetBlock.style.display = 'block';
         }
-    }
+    });
 
-    // Показываем первый блок по умолчанию
-    showBlock('delivery-payment');
-});
+    // Если вызвано через клик — красим только нажатую кнопку
+    if (event?.target && event.target.classList.contains('delivery-btn')) {
+        const allButtons = document.querySelectorAll('.delivery-btn');
+        allButtons.forEach(btn => {
+            btn.classList.remove('active');
+            btn.style.backgroundColor = '#FBEBF1';
+        });
+
+        event.target.classList.add('active');
+        event.target.style.backgroundColor = '#FF89AA';
+    }
+}
+
+// смена сердечек в каталоге 
+function toggleFavorite(icon) {
+    const isActive = icon.src.includes('Heart.png');
+    icon.src = isActive ? '../img/Heart-1.png' : '../img/Heart.png';
+}
+
+
 ////////////////переходы///////////////////
 
 function goToPersonalAccount() {
@@ -211,3 +260,70 @@ function goToPersonalAccount() {
     var path = (window.location.pathname.includes('index.html')) ? "#" : "../index.html";
     window.location.href = path;
     }
+
+////////////////////////из сохраненного старого кода//////////////////////
+document.querySelectorAll('.submenu a, .dropdown-toggle, .submenu .menu-arrow').forEach(item => {
+    item.addEventListener('click', function (event) {
+
+        // Сбрасываем цвет для всех пунктов меню
+        document.querySelectorAll('.submenu a, .dropdown-toggle, .submenu .menu-arrow').forEach(link => {
+            link.style.color = '#494747'; // Исходный цвет для .dropdown-toggle
+            if (link.querySelector('.menu-arrow')) {
+                link.querySelector('.menu-arrow').style.color = '#E0E0E0'; // Исходный цвет для стрелок
+            }
+        });
+
+        // Меняем цвет на активный
+        this.style.color = '#FF89AA'; // Цвет для активного пункта
+        if (this.querySelector('.menu-arrow')) {
+            this.querySelector('.menu-arrow').style.color = '#FF89AA'; // Цвет для стрелки активного пункта
+        }
+    });
+});
+
+document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', function () {
+        const dropdown = this.nextElementSibling; // Получаем следующее меню
+
+        // Скрываем другие выпадающие меню
+        document.querySelectorAll('.dropdown').forEach(menu => {
+            if (menu !== dropdown) {
+                menu.style.display = 'none'; // Скрываем, если это не текущее меню
+            }
+        });
+
+        // Переключаем текущее меню
+        if (dropdown.style.display === 'block') {
+            dropdown.style.display = 'none';
+            this.classList.remove('active'); // Убираем активный класс
+        } else {
+            dropdown.style.display = 'block'; // Показываем текущее меню
+            this.classList.add('active'); // Добавляем активный класс
+        }
+    });
+});
+// Скрываем выпадающее меню при нажатии на любой другой пункт меню
+document.querySelectorAll('.submenu a').forEach(item => {
+    item.addEventListener('click', function () {
+        // Скрываем все выпадающие меню
+        document.querySelectorAll('.dropdown').forEach(menu => {
+            menu.style.display = 'none';
+        });
+
+        // Убираем активные классы у всех dropdown-toggle
+        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+            toggle.classList.remove('active');
+        });
+    });
+});
+
+function updateButtonText() {
+        const button = document.querySelector('.auth-button.active');
+        if (window.innerWidth <= 1440) {
+            button.textContent = 'войти |';
+        } else {
+            button.textContent = 'войти'; // Замените на исходный текст
+        }
+    }// Обновляем текст при загрузке страницы и изменении размера окна
+    window.addEventListener('load', updateButtonText);
+    window.addEventListener('resize', updateButtonText);

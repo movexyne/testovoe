@@ -132,8 +132,21 @@ header h1 {
     .bottom_text p{
         font-size: 16px;
     }
+    .hero-image {
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+    
+}
+@media (max-width: 1921px){
+    .hero-image {
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+    
 }
 @media (max-width: 1921px) and (min-width: 1025px){
+    
     .container {
         grid-template-columns: repeat(4, 1fr);
         grid-template-columns: repeat(4, 1fr);
@@ -207,6 +220,11 @@ header h1 {
 }
 
 @media (max-width: 630px){
+    .hero-image {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0px;
+    }
     .container {
         grid-template-columns:  1fr;
     }
